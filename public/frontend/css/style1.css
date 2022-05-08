@@ -1,0 +1,245 @@
+.main{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* NAVBAR */
+.header{
+    position: fixed;
+    width: 88%;
+    z-index: 10;
+    background-color: white;
+    height: 85px;
+}
+.header li{
+    list-style: none;
+}
+.header-logo {
+    float: left;
+} 
+.list-left li {
+    float: left;
+    padding: 20px 35px 20px 0px;
+}
+.list-right li {
+    float: right;
+    padding: 20px 10px;
+}
+.header img{
+    position: relative;
+    width: 80%;
+    top: -8px;
+}
+.header a{
+    text-decoration: none;
+    color: #6D7D8B;
+    font-size: 15px;
+}
+/*  */
+.section{
+    width: 100%;
+}
+
+.section .container{
+    width: 100%;
+    display: block;
+    margin: 0px auto;
+    /* padding: 50px; */
+}
+
+.section .container .row p{
+    margin-top: 20px;
+    font-size: 17px;
+}
+
+.container .title{
+    width: 100%;
+    margin-bottom: 50px;
+    /* margin-top: 5%; */
+}
+
+.container .title h1{
+    text-transform: uppercase;
+    font-size: 35px;
+}
+
+.content{
+    float: left;
+    width: 60%;
+}
+
+.image-section{
+    float: left;
+    width: 40%;
+}
+
+.image-section img{
+    width: 100%;
+    height: auto;
+}
+
+.image-responsive{
+    display: block;
+    height: auto;
+    width: auto;
+}
+
+.content .article p{
+    font-size: 17px;
+    line-height: 1.5;
+    margin-left: 20px;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+p{
+    text-align: justify;
+}
+
+/* OUR TEAM */
+.team-section{
+    width: 100%;
+}
+
+.team-section .container{
+    width: 100%;
+    margin: auto;
+}
+
+.team-section .container .row{
+    width: 100%;
+    margin: auto;
+}
+
+.team-section .container .row .title{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.team-section .container .row .title h1{
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.team-section .container .team-card{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.team-section .container .team-card .card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.team-section .container .row .col p{
+    text-align: center;
+}
+.team-section .container .row .col h4{
+    font-size: 15px;
+    text-align: center;
+}
+
+.team-section .container .row .col img{
+    height: auto;
+    width: auto;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    /* margin-left: 20px; */
+    padding: 10px;
+}
+
+
+/* Cart */
+.cart-page{
+    width: 80%;
+    margin: 10px auto;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart-info p{
+    color: orangered;
+}
+.cart-info .info{
+    margin-top: 30px;
+}
+
+th{
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+    background: #ff523b;
+    font-weight: normal;
+}
+
+td{
+    padding: 10px 5px;
+}
+
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+
+td a{
+    color: #ff523b;
+    font-size: 12px;
+}
+
+td img{
+    width: 150px;
+    height: 150px;
+    margin-right: 10px;
+
+}
+
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.total-price table{
+    border-top: 3px solid #ff523b;
+    width: 100%;
+    /* max-width: 350px; */
+}
+
+button{
+    background-color: #ff523b;
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    border-color: #ff523b;
+    border-radius: 5px;
+}
+
+/* Detail Artikel */
+.card-header{
+    background-color: orangered; 
+    color: white;
+}
+.card-body{
+    border-color: orangered;
+}
+.card-body img{
+    width: auto;
+    height: auto;
+    float: center;
+}
