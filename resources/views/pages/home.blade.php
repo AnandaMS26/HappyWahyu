@@ -6,7 +6,6 @@ Happy Meat
 
 @section('content')
  <!-- Header -->
-    
     <header class="section-hero-lp">
       <div class="container-hero-lp">
         <div class="flexbox-hero-lp">

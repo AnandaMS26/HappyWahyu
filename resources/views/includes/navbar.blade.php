@@ -22,10 +22,22 @@
 
         @auth
         <div class="header-list list-right">
+            <ul>
+                <li><form action="{{ url('logout') }}" method="POST">
+                    @csrf
+                    <input type="submit" value="Logout">
+                  </form></li>
+                <li><a href="/my-account">My Account</a></li>
+                <!-- <li><i class="fa fa-shopping-cart"></i></li> -->
+                {{-- <li><a href="/mycart"><i class="fa fa-shopping-cart"></i></a></li> --}}
+            </ul>
+        </div>
+
+        {{-- <div class="header-list list-right">
             <form action="{{ url('logout') }}" method="POST">
               @csrf
               <button type="submit">Keluar</button>
             </form>
-        </div>
+        </div> --}}
         @endauth
     </div>

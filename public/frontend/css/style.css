@@ -2,17 +2,18 @@
 
 body{
     font-family: 'Mulish', sans-serif;
-    margin: 0 auto;
-    width: 88%;
+    /* margin: 0 auto; */
+    /* width: 88%; */
 }
 
 /* NAVBAR */
 .header{
     position: fixed;
-    width: 88%;
+    width: 100%;
     z-index: 10;
     background-color: white;
     height: 85px;
+    font-weight: 700;
 }
 .header li{
     list-style: none;
@@ -24,6 +25,12 @@ body{
     float: left;
     padding: 20px 35px 20px 0px;
 }
+.list-right {
+    margin-right: 6%;
+}
+.header-left {
+    margin-left: 6%;
+}
 .list-right li {
     float: right;
     padding: 20px 10px;
@@ -31,13 +38,14 @@ body{
 .header img{
     position: relative;
     width: 80%;
-    top: -8px;
+    top: -15px;
 }
 .header a{
     text-decoration: none;
     color: #6D7D8B;
     font-size: 15px;
 }
+
 
 /* LOGIN */
 .main{
