@@ -16,6 +16,43 @@ use App\Http\Controllers\Admin\TransactionController;
 |
 */
 
+Route::get('/aboutus', function(){
+    return view('pages/aboutus');
+});
+Route::get('/user-login', function(){
+    return view('pages/login');
+});
+Route::get('/user-register', function(){
+    return view('pages/register');
+});
+Route::get('/detail-product', function(){
+    return view('pages/detail_produk');
+});
+Route::get('/my-account', function(){
+    return view('pages/myaccount');
+});
+Route::get('/my-order', function(){
+    return view('pages/myorder');
+});
+Route::get('/detail-order', function(){
+    return view('pages/detail_order');
+});
+Route::get('/checkout-order', function(){
+    return view('pages/checkout');
+});
+Route::get('/mycart', function(){
+    return view('pages/cart');
+});
+Route::get('/detail-artikel', function(){
+    return view('pages/detail_artikel');
+});
+Route::get('/product', function(){
+    return view('pages/produk');
+});
+Route::get('/article', function(){
+    return view('pages/artikel');
+});
+
 Route::get('/', 'App\Http\Controllers\HomeController@index')
     ->name('home');
 

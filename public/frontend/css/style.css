@@ -12,8 +12,9 @@ body{
     width: 100%;
     z-index: 10;
     background-color: white;
-    height: 85px;
+    height: 92px;
     font-weight: 700;
+    top: -8px;
 }
 .header li{
     list-style: none;
@@ -37,8 +38,8 @@ body{
 }
 .header img{
     position: relative;
-    width: 80%;
-    top: -15px;
+    width: 75%;
+    top: -18px;
 }
 .header a{
     text-decoration: none;
@@ -446,7 +447,7 @@ button:focus{
 }
 
 .logo-footer {
-  background-image: url(../img/logo_meat.png);
+  background-image: url(../image/logo_meat.png);
   width: 80px;
   height: 80px;
   margin-right: 15px;

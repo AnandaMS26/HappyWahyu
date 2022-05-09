@@ -1,4 +1,19 @@
-<footer class="footer">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url('frontend/css/style.css') }}" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <footer class="footer">
       <div class="container">
         <div class="row">
           <div class="footer-col">
@@ -33,3 +48,5 @@
         </div>
       </div>
     </footer>
+  </body>
+</html>
