@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/homepage.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap"
@@ -22,6 +23,9 @@
   </head>
   <body class="body">
     <div class="header">
+        @include('navbar')
+    </div>
+    <!-- <div class="header">
       <div class="header-container">
         <div class="header-logo">
           <a href="/"><img src="img/logo.png" alt="" /></a>
@@ -36,16 +40,16 @@
         </div>
         <div class="header-list list-right">
           <ul>
-            <li><a href="/user-register">Register</a></li>
+            <li><a href="/user-register">Register</a></li> -->
             <!-- <li><i class="fa fa-shopping-cart"></i></li> -->
-            <li><a href="/user-login">Log In</a></li>
+            <!-- <li><a href="/user-login">Log In</a></li>
             <li>
               <a href="mycart"><i class="fa fa-shopping-cart"></i></a>
             </li>
           </ul>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <section class="section-hero-lp">
       <div class="container-hero-lp">
@@ -250,7 +254,11 @@
       </div>
     </section>
 
-    <footer class="footer">
+    <!-- <footer class="footer"> -->
+    @include('footer')
+    <!-- </footer> -->
+
+    <!-- <footer class="footer">
       <div class="container">
         <div class="row">
           <div class="footer-col">
@@ -284,6 +292,6 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
   </body>
 </html>

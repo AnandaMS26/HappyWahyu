@@ -18,7 +18,7 @@
             <h2 class="profil-saya">Profil Saya</h2>
             <div class="col-md-5 profile">
                 <div class="profile-name">
-                    <div class="profile-photo"><img src="img/image.png" alt=""></div>
+                    <div class="profile-photo"><img src="img/meatt.png" alt=""></div>
                     <h3 class="user-name">Star Butterfly</h3>
                 </div>
                 <div class="profile-title">

@@ -21,7 +21,7 @@
     <title>Document</title>
   </head>
   <body class="body">
-    {{-- <div class="header">
+    <!-- {{-- <div class="header">
       <div class="header-container">
         <div class="header-logo">
           <a href="/"><img src="img/logo.png" alt="" /></a>
@@ -36,17 +36,19 @@
         </div>
         <div class="header-list list-right">
           <ul>
-            <li><a href="/user-register">Register</a></li>
+            <li><a href="/user-register">Register</a></li> -->
             <!-- <li><i class="fa fa-shopping-cart"></i></li> -->
-            <li><a href="/user-login">Log In</a></li>
+            <!-- <li><a href="/user-login">Log In</a></li>
             <li>
               <a href="mycart"><i class="fa fa-shopping-cart"></i></a>
             </li>
           </ul>
         </div>
       </div>
-    </div> --}}
-    @include('navbarr')
+    </div> --}} -->
+    <div class="header">
+      @include('navbar')
+    </div>
     <section class="section-hero">
       <div class="container-hero">
         <div class="flexbox-hero">
@@ -143,7 +145,7 @@
     </section>
     
     @include('footer')
-    {{-- <footer class="footer">
+    <!-- {{-- <footer class="footer">
       <div class="container">
         <div class="row">
           <div class="footer-col">
@@ -177,6 +179,6 @@
           </div>
         </div>
       </div>
-    </footer> --}}
+    </footer> --}} -->
   </body>
 </html>

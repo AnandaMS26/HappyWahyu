@@ -22,7 +22,9 @@
     <title>Document</title>
   </head>
   <body class="body">
-    @include('navbarr')
+    <div class="header">
+        @include('navbar')
+    </div>
 
     <section class="section-hero">
       <div class="container-hero">
@@ -139,7 +141,9 @@
       </div>
     </section>
 
-    <footer class="footer">
+    @include('footer')
+
+    <!-- <footer class="footer">
       <div class="container">
         <div class="row">
           <div class="footer-col">
@@ -173,6 +177,6 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
   </body>
 </html>

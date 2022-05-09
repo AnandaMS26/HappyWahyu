@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Mulish:700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Mulish:400,700,800,900');
 
 body{
     font-family: 'Mulish', sans-serif;
-    /* margin: 0 auto; */
+    margin: 0 auto;
     /* width: 88%; */
 }
 
@@ -46,11 +46,13 @@ body{
     font-size: 15px;
 }
 
-
 /* LOGIN */
 .main{
-    padding: 110px 6%;
+    padding: 100px 6%;
     color: #6D7D8B;
+}
+.container {
+    padding: 0% 6%;
 }
 .img-login{
     position: absolute;
@@ -68,6 +70,7 @@ body{
     float: right;
     margin-top: 20px;
     right: -5%;
+    margin-bottom: 10%;
 }
 .box-login{
     text-align: left;
@@ -121,6 +124,7 @@ body{
     margin-top: 2.5%;
     padding: 1%;
     margin-bottom: 10%;
+    font-weight: 700;
 }
 .profile-photo img{
     position: relative;
@@ -131,13 +135,16 @@ body{
 .profile-name{
     margin: 20px 0px;
     font-size: 16px;
+    font-weight: 800;
 }
 .profil-saya{
     font-size: 28px;
+    font-weight: 700;
 }
 .user-name{
     font-size: 18px;
     padding-top:4%;
+    font-weight: 700;
 }
 .profile-title{
     font-size: 14px;
@@ -167,10 +174,12 @@ body{
     color: #6D7D8B;
     float: right;
     margin: 2.5% 0% 10% 0%;
+    font-weight: 700;
     /* right: -5%; */
 }
 .box-account{
     text-align: left;
+    font-weight: 700;
     /* margin: 5% 0%; */
 }
 .acc-btn{
@@ -188,6 +197,7 @@ body{
     margin-bottom: 5%;
     font-size: 14px;
     color: #6D7D8B;
+    font-weight: 700;
 }
 .account-part textarea{
     border: #BBC8D4 2px solid;
@@ -195,6 +205,7 @@ body{
     margin-bottom: 5%;
     font-size: 14px;
     color: #6D7D8B;
+    font-weight: 700;
 }
 
 /* USER PROFILE - MY ORDER */
@@ -223,10 +234,12 @@ body{
     padding: 1% 3.5%;
     border-radius: 15%;
     color: #FC5043;
+    font-weight: 700;
 }
 .order h4{
     font-size: 20px;
     color: black;
+    font-weight: 700;
 }
 .order .detail-btn:hover{
     padding: 1% 3.5%;
@@ -240,7 +253,7 @@ body{
     position: absolute;
     border: #94A3B1 2px solid;
     border-radius: 20px;
-    margin: 110px 0px;
+    margin: 3% 0px;
     /* padding-left: 10%; */
 }
 .foto-product{
@@ -351,3 +364,93 @@ button:focus{
     height: 38px;
 }
 
+/* FOOTER */
+.footer .container {
+  max-width: 1170px;
+  margin: auto;
+  width: 100%;
+}
+.footer .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer ul {
+  list-style: none;
+}
+.footer {
+  background-color: hsl(220, 60%, 95%);
+  padding: 70px 0;
+}
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col h4 {
+  font-size: 18px;
+  color: #171414;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+  font-size: 21px;
+  font-family: "Mulish", sans-serif;
+}
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #fc5043;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.text-block-2 {
+  font-size: 12px;
+  font-family: "Mulish", sans-serif;
+}
+
+.footer-col ul li a {
+  font-size: 14px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 300;
+  color: #828282;
+  display: block;
+  transition: all 0.3s ease;
+  font-family: "Mulish", sans-serif;
+}
+.footer-col ul li a:hover {
+  color: #1e71ff;
+  padding-left: 8px;
+}
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(12, 15, 20, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+.logo-footer {
+  background-image: url(../img/logo_meat.png);
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+  border-radius: 40px;
+  background-size: cover;
+  background-position: 50% 50%;
+}

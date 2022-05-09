@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Mulish:400,700,800,900');
 /*
  --- 01 TYPOGRAPHY SYSTEM
 
@@ -28,8 +29,8 @@ Default: 1
  */
 
  * {
-  padding: 0;
-  margin: 0;
+  /* padding: 0; */
+  /* margin: 0; */
   box-sizing: border-box;
 }
 
@@ -38,10 +39,14 @@ Default: 1
 /************************/
 
 body {
-  font-family: "inter", sans-serif;
+  /* font-family: "inter", sans-serif; */
   line-height: 1;
   font-weight: 400;
   color: #555;
+}
+
+.header {
+  font-weight: 700;
 }
 
 /*
@@ -73,7 +78,7 @@ h3 {
 /************************/
 /* NAVBAR */
 /************************/
-.header {
+/* .header {
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: hsl(220, 60%, 95%, 0.2);
@@ -111,7 +116,7 @@ h3 {
   color: #6d7d8b;
   font-size: 14px;
   font-family: "Mulish", sans-serif;
-}
+} */
 /************************/
 /* HERO SECTION */
 /************************/
@@ -401,21 +406,21 @@ h3 {
   height: 204px;
   background-size: cover;
   background-position: 0px 0px;
-  background-image: url(../image/daging/Image.png);
+  background-image: url(../img/daging/Image.png);
 }
 
 .card-thumbnail-product-2 {
   height: 204px;
   background-size: cover;
   background-position: 0px 0px;
-  background-image: url(../image/daging/Image-1.png);
+  background-image: url(../img/daging/Image-1.png);
 }
 
 .card-thumbnail-product-3 {
   height: 204px;
   background-size: cover;
   background-position: 0px 0px;
-  background-image: url(../image/daging/Image-2.png);
+  background-image: url(../img/daging/Image-2.png);
 }
 
 .category-name {
@@ -558,21 +563,21 @@ h3 {
   height: 204px;
   background-size: cover;
   background-position: 0px 0px;
-  background-image: url(../image/daging/Image.png);
+  background-image: url(../img/artikel/Image.png);
 }
 
 .card-thumbnail-article-2 {
   height: 204px;
   background-size: cover;
   background-position: 0px 0px;
-  background-image: url(../image/daging/Image-1.png);
+  background-image: url(../img/artikel/Image-1.png);
 }
 
 .card-thumbnail-article-3 {
   height: 204px;
   background-size: cover;
   background-position: 0px 0px;
-  background-image: url(../image/daging/Image-2.png);
+  background-image: url(../img/artikel/Image-2.png);
 }
 
 .card-content-article {
@@ -665,11 +670,12 @@ h3 {
 /************************/
 /* FOOTER */
 /************************/
-.container {
+/* .footer .container {
   max-width: 1170px;
   margin: auto;
+  width: 100%;
 }
-.row {
+.footer .row {
   display: flex;
   flex-wrap: wrap;
 }
@@ -752,7 +758,7 @@ ul {
   border-radius: 40px;
   background-size: cover;
   background-position: 50% 50%;
-}
+} */
 
 @media screen and (max-width: 991px) {
   .product-grid {
@@ -839,10 +845,10 @@ ul {
     max-width: 280px;
   }
 
-  .footer-col {
+  /* .footer-col {
     width: 50%;
     margin-bottom: 30px;
-  }
+  } */
 }
 
 @media screen and (max-width: 479px) {
@@ -859,9 +865,9 @@ ul {
     padding-right: 15px;
   }
 
-  .footer-col {
+  /* .footer-col {
     width: 100%;
-  }
+  } */
 
   .left-block-hero-lp {
     min-width: 220px;
