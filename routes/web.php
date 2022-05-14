@@ -57,9 +57,6 @@ Route::get('/article', function(){
     return view('pages/artikel');
 });
 
-Route::get('/product', 'App\Http\Controllers\DetailController@index')
-    ->name('detail');
-    
 Route::get('/product', 'App\Http\Controllers\ProdController@index')
     ->name('product');
 
