@@ -18,7 +18,7 @@ class CreateTransactionsTable extends Migration
             $table->integer('meat_packages_id');
             $table->integer('users_id')->nullable();
             $table->integer('transaction_total');
-            $table->integer('transaction_status');
+            $table->string('transaction_status');
             $table->softDeletes();
             $table->timestamps();
         });

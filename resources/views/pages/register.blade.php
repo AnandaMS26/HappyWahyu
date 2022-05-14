@@ -19,22 +19,65 @@
             <div class="col-md-5 login">
                 <div class="login-title"><h2>DAFTAR</h2></div>
                 <div class="login-part">
-                    <form action="">
+                    <form method="POST" action="{{ route('register') }}">
+                        @csrf
+                        <div class="box-login">
+                            <h6>Name</h6>
+                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Name">
+
+                            @error('name')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
                         <div class="box-login">
                             <h6>Username</h6>
-                            <input type="text" class="form-control" placeholder="Username">
+                            <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus placeholder="username">
+
+                            @error('username')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                         <div class="box-login">
                             <h6>Email</h6>
-                            <input type="email" class="form-control" placeholder="Email">
+                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email">
+                        
+                            @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
-                        <div class="box-login">
+                        {{-- <div class="box-login">
                             <h6>Nomor Telepon</h6>
                             <input type="text" class="form-control" placeholder="Nomor Telepon">
+                        </div> --}}
+                        <div class="box-login">
+                            <h6>Address</h6>
+                            <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" autofocus placeholder="Address">
+                        
+                            @error('address')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                         <div class="box-login">
                             <h6>Password</h6>
-                            <input type="password" class="form-control" placeholder="Password">
+                            <input id="password" type="password" placeholder="Password"  class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                            @error('password')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="box-login">
+                            <h6>Confirm Password</h6>
+                            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Password" required autocomplete="new-password">
                         </div>
                         <button class="w-100 btn btn-lg mt-3 login-btn" type="submit">Daftar</button>
                         <p>Atau</p>

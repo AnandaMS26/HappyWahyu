@@ -55,7 +55,6 @@
                             <td>{{ $detail->id }}</td>
                             <td>{{ $detail->username }}</td>
                             <td>{{ $detail->address }}</td>
-                            <td>{{ $detail->phone }}</td>
                         </tr>
                     @endforeach
                 </table></td>

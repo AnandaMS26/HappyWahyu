@@ -52,7 +52,7 @@
                 <h5>Tanggal Pembelian</h5>
                 <p>23 - 03 - 2022</p>
             </div>
-            <!-- <button>Cancel Order</button> -->
+            <button>Cancel Order</button>
         </div>
     </div>
 </body>

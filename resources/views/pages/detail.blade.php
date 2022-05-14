@@ -5,15 +5,28 @@
 @section('content')
 <div class="col-md-12">    
             <div class="container detail-product">
+                @if($item->galleries->count())
                 <div class="container col-lg-5 col-md-5 col-sm-12 col-12 foto-product">
-                    <img src="{{ url('frontend/image/meat_photo.png') }}" alt="">
+                    <img src="{{ Storage::url($item->galleries->first()->image) }}" alt="">
                 </div>
+                @endif
                 <div class="col-lg-6 col-md-6 col-sm-12 col-12 desc-product">
-                    <h2>Boneless Prime Rib</h2>
-                    <h4><a href="">Miyazakgyu Japanese Wagyu</a></h4>
-                    <h5>Rp.20000/kg</h5>
-                    <p>Project Discussions, important documents and get to know the news project earlier. Its easy to use and has a good Interface and comfortable with all good services.</p>
-                    <button><i class="fa fa-shopping-cart"></i> Add to Cart</button>
+                    <h2>{{ $item->title }}</h2>
+                    <h4><a href="">{{ $item->type }}</a></h4>
+                    <h5>Rp.{{ $item->price }}/kg</h5>
+                    <p>{{!! $item->about !!}}</p>
+                    @auth
+                    <form action="{{route('checkout_process',$item->id)}}" method="post">
+                  
+                    @csrf
+                        <button class="btn btn-block btn-join-now mt-3 py-3" type="submit">
+                            Checkout
+                        </button>
+                    </form>
+                    @endauth
+                    @guest
+                    <a href="{{ route('login') }}"><i class="fa fa-shopping-cart"></i>Login or Register to Checkout</a>
+                    @endguest
                 </div>
             </div>
         </div>

@@ -18,6 +18,7 @@ class MeatPackageController extends Controller
     public function index()
     {
         $items = MeatPackage::all();
+        
 
         return view('pages.admin.meat-package.index',[
             'items' =>$items

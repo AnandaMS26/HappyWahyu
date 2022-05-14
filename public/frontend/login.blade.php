@@ -17,7 +17,7 @@
     <!-- Content -->
     <div class="main">
         <div class="container">
-            <img src="img/meatt.png" alt="" class="img-login">
+            <img src="img/image.png" alt="" class="img-login">
             <div class="col-md-5 col-sm-12 login">
                 <div class="login-title"><h2>LOGIN</h2></div>
                 <div class="login-part">

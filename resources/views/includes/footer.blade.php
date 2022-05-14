@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{{ url('frontend/css/style.css') }}" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
-    />
-    <title>Document</title>
-  </head>
-  <body>
-    <footer class="footer">
+<footer class="footer">
       <div class="container">
         <div class="row">
           <div class="footer-col">
@@ -26,8 +11,11 @@
             <h4>company</h4>
             <ul>
               <li><a href="/aboutus">about us</a></li>
-              <li><a href="#">contact us</a></li>
-              <li><a href="#">FAQ</a></li>
+              <li>
+                {{-- <button type="submit" class="btn text-white mt-3" style="background-color: orangered"
+                   onclick="gotowhatsapp()">Contact Us</button> --}}
+                   <a rel="nofollow" href="https://api.whatsapp.com/send?phone=6285320400329&text"><b>Contact Us</b></a>
+              </li>
             </ul>
           </div>
           <div class="footer-col">
@@ -48,5 +36,14 @@
         </div>
       </div>
     </footer>
-  </body>
-</html>
+  
+    <script>
+      function gotowhatsapp() {
+  
+        var url =
+          "https://wa.me/+6285320400329?text=";
+        window.open(url, "_blank").focus();
+      }
+      
+  
+    </script>

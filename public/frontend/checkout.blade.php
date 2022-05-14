@@ -27,10 +27,6 @@
                 <td>Lala</td>
             </tr>
             <tr>
-                <td><b>Phone</b> </td>
-                <td>08123456788</td>
-            </tr>
-            <tr>
                 <td><b>Address</b></td>
                 <td>Bandung</td>
             </tr>

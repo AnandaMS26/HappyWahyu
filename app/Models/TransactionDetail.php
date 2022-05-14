@@ -11,7 +11,7 @@ class TransactionDetail extends Model
     use softDeletes;
 
     protected $fillable = [
-        'transactions_id', 'username', 'phone',
+        'transactions_id', 'username',
         'address'
     ];
 

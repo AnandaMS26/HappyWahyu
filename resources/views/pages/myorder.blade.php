@@ -24,7 +24,7 @@
                 <div class="profile-title">
                     <p><a href="/my-account" class="title">My Account</a></p>
                     <p><a href="" class="active">My Order</a></p>
-                    <p><a href="" class="title">Log Out</a></p>
+                    {{-- <p><a href="" class="title">Log Out</a></p> --}}
                 </div>
             </div>
             <div class="col-md-7 order">

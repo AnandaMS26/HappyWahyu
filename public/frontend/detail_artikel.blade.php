@@ -45,6 +45,5 @@
         <a href="/article"><button style="width: 10%;">Back</button></a>
         
     </div>
-    @include('footer')
 </body>
 </html>

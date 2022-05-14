@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\MeatPackageController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\TransactionController;
+use App\Http\Controllers\Admin\CheckoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,9 @@ use App\Http\Controllers\Admin\TransactionController;
 |
 */
 
+Route::get('/', 'App\Http\Controllers\HomeController@index')
+    ->name('home');
+
 Route::get('/aboutus', function(){
     return view('pages/aboutus');
 });
@@ -25,9 +29,9 @@ Route::get('/user-login', function(){
 Route::get('/user-register', function(){
     return view('pages/register');
 });
-Route::get('/detail-product', function(){
-    return view('pages/detail_produk');
-});
+// Route::get('/detail-product', function(){
+//     return view('pages/detail_produk');
+// });
 Route::get('/my-account', function(){
     return view('pages/myaccount');
 });
@@ -46,21 +50,41 @@ Route::get('/mycart', function(){
 Route::get('/detail-artikel', function(){
     return view('pages/detail_artikel');
 });
-Route::get('/product', function(){
-    return view('pages/produk');
-});
+// Route::get('/product', function(){
+//     return view('pages/produk');
+// });
 Route::get('/article', function(){
     return view('pages/artikel');
 });
 
-Route::get('/', 'App\Http\Controllers\HomeController@index')
-    ->name('home');
-
-Route::get('/detail', 'App\Http\Controllers\DetailController@index')
+Route::get('/product', 'App\Http\Controllers\DetailController@index')
     ->name('detail');
+    
+Route::get('/product', 'App\Http\Controllers\ProdController@index')
+    ->name('product');
 
-Route::get('/checkout', 'App\Http\Controllers\CheckoutController@index')
-    ->name('checkout');
+Route::get('/detail_produk/{slug}', 'App\Http\Controllers\DetailController@index')
+    ->name('detail_produk');
+
+Route::get('/checkout/{id}', 'App\Http\Controllers\CheckoutController@process')
+    ->name('checkout_process')
+    ->middleware(['auth', 'verified']);
+
+Route::post('/checkout/{id}', 'App\Http\Controllers\CheckoutController@index')
+    ->name('checkout')
+    ->middleware(['auth', 'verified']);
+
+Route::post('/checkout/create/{detail_id}', 'App\Http\Controllers\CheckoutController@create')
+    ->name('checkout-create')
+    ->middleware(['auth', 'verified']);
+
+Route::post('/checkout/remove/{detail_id}', 'App\Http\Controllers\CheckoutController@remove')
+    ->name('checkout-remove')
+    ->middleware(['auth', 'verified']);
+
+Route::post('/checkout/confirm/{id}', 'App\Http\Controllers\CheckoutController@success')
+    ->name('checkout-success')
+    ->middleware(['auth', 'verified']);
 
 Route::prefix('admin')
     ->middleware(['auth', 'admin'])

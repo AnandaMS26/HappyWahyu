@@ -23,11 +23,11 @@ class Transaction extends Model
         return $this->hasMany(TransactionDetail::class, 'transactions_id', 'id');
     }
 
-    public function meat_packages(){
-        return $this->belongTo(MeatPackage::class, 'meat_packages_id', 'id');
+    public function meat_package(){
+        return $this->belongsTo(MeatPackage::class, 'meat_packages_id', 'id');
     }
 
     public function user(){
-        return $this->belongTo(User::class, 'users_id', 'id');
+        return $this->belongsTo(User::class, 'users_id', 'id');
     }
 }

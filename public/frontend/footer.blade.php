@@ -4,24 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/homepage.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- <link
+    <link
       href="https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap"
       rel="stylesheet"
-    /> -->
+    />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
     />
-    <!-- <link
+    <link
       href="https://fonts.googleapis.com/css2?family=Mulish&display=swap"
       rel="stylesheet"
-    /> -->
+    />
     <title>Document</title>
   </head>
-  <body>
-    <div class="footer">
+  <body class="body">
+    <footer class="footer">
       <div class="container">
         <div class="row">
           <div class="footer-col">
@@ -55,6 +55,6 @@
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   </body>
 </html>

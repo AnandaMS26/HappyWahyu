@@ -13,10 +13,10 @@
     </div>
 
     <!-- Content -->
-    <div class="main">
+    <!-- <div class="main"> -->
         <div class="col-md-12">    
             <div class="container detail-product">
-                <div class="col-lg-5 col-md-5 col-sm-12 col-12 foto-product">
+                <div class="container col-lg-5 col-md-5 col-sm-12 col-12 foto-product">
                     <img src="img/meat_photo.png" alt="">
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-12 desc-product">
@@ -28,6 +28,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    <!-- </div> -->
 </body>
 </html>

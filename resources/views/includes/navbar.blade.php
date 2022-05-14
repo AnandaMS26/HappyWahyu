@@ -41,7 +41,7 @@
                     @csrf
                     <input type="submit" value="Logout">
                   </form></li>
-                <li><a href="/my-account">My Account</a></li>
+                <li><a href="/my-account">{{ Auth::user()->username }}</a></li>
                 <!-- <li><i class="fa fa-shopping-cart"></i></li> -->
                 {{-- <li><a href="/mycart"><i class="fa fa-shopping-cart"></i></a></li> --}}
             </ul>

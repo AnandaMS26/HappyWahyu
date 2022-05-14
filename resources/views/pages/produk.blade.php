@@ -30,7 +30,7 @@
       <div class="container-hero">
         <div class="flexbox-hero">
           <div class="right-block-hero">
-            <img class="image-hero" src="img/Image.png" />
+            <img class="image-hero" src="frontend/image/Image.png" />
           </div>
           <div class="left-block-hero">
             <h2 class="hero-heading">Happy Meat Product</h2>
@@ -54,7 +54,7 @@
           comfortable with all good services.
         </p> -->
         <div class="filter-container">
-          <div class="category-head">
+          {{-- <div class="category-head">
             <ul>
               <div class="category-title active" id="all">
                 <li>All</li>
@@ -69,10 +69,34 @@
                 <li>Chunk</li>
               </div>
             </ul>
-          </div>
+          </div> --}}
           <div class="product-grid">
-            <div href="/detail-product" class="product-card rib">
-              <div class="card-thumbnail-product-1">
+            @foreach ($items as $item)
+              <div href="/detail-product" class="product-card rib">
+                <div class="card-thumbnail-product-1" style="background-image: url('{{ $item->galleries->count() ? Storage::url
+                  ($item->galleries->first()->image) : '' }}')">
+                  <span class="category-name">{{ $item->type }}</span>
+                </div>
+                <div class="card-content-product">
+                  <h2 class="heading-card-product">
+                    <a href="{{ route('detail_produk', $item->slug) }}">{{ $item->title }}</a>
+                  </h2>
+                  <p class="caption-card">
+                    {{ $item->about }}
+                    </p>
+                  <div class="price-cart-card">
+                    <div class="price-card">Rp {{ $item->price }}</div>
+                    <div>
+                      <a href="{{ route('detail_produk', $item->slug) }}" class="buy"
+                        >Beli</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              @endforeach
+            {{-- <div href="/detail-product" class="product-card rib">
+              <div class="card-thumbnail-product-1" style="background-image: url(frontend/image/daging/Image.png)">
                 <span class="category-name">Rib</span>
               </div>
               <div class="card-content-product">
@@ -94,7 +118,7 @@
               </div>
             </div>
             <div href="/detail-product" class="product-card w-inline-block">
-              <div class="card-thumbnail-product-2"></div>
+              <div class="card-thumbnail-product-2" style="background-image: url(frontend/image/daging/Image-1.png)"></div>
               <div class="card-content-product">
                 <h2 class="heading-card-product">
                   <a href="/detail-product">Boneless prime rib | Miyazakgyu Japanese Wagyu</a>
@@ -114,7 +138,7 @@
               </div>
             </div>
             <div class="product-card w-inline-block">
-              <div class="card-thumbnail-product-3"></div>
+              <div class="card-thumbnail-product-3" style="background-image: url(frontend/image/daging/Image-2.png)"></div>
               <div class="card-content-product">
                 <h2 class="heading-card-product">
                     <a href="/detail-product">Boneless prime rib | Miyazakgyu Japanese Wagyu</a>
@@ -132,7 +156,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> --}}
           </div>
         </div>
         <div class="button-loading">

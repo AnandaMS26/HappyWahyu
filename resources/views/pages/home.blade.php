@@ -83,7 +83,7 @@ Happy Meat
           pembelian daging sapi segar, impor beku hingga aneka frozen food.
           Hubungi kami segera untuk mendapatkan penawaran terbaik.
         </p>
-        <div class="product-grid">
+        {{-- <div class="product-grid">
           <div href="#" class="product-card business">
             <div class="card-thumbnail-product-1">
               <span class="category-name">business</span>
@@ -101,7 +101,7 @@ Happy Meat
             </div>
           </div>
           <div href="#" class="product-card w-inline-block">
-            <div class="card-thumbnail-product-2"></div>
+            <div class="card-thumbnail-product-2" style="background-image: url(frontend/image/daging/Image-1.png)"></div>
             <div class="card-content-product">
               <h2 class="heading-card-product">Daging Wahyu Premium</h2>
               <div class="price-cart-card">
@@ -128,9 +128,35 @@ Happy Meat
               </div>
             </div>
           </div>
+        </div> --}}
+        <div class="product-grid">
+          @foreach ($latest_product as $items => $item)
+              <div href="" class="product-card rib">
+                <div class="card-thumbnail-product-1" style="background-image: url('{{ $item->galleries->count() ? Storage::url
+                  ($item->galleries->first()->image) : '' }}')">
+                  <span class="category-name">{{ $item->type }}</span>
+                </div>
+                <div class="card-content-product">
+                  <h2 class="heading-card-product">
+                    <a href="{{ route('detail_produk', $item->slug) }}">{{ $item->title }}</a>
+                  </h2>
+                  <p class="caption-card">
+                    {{ $item->about }}
+                    </p>
+                  <div class="price-cart-card">
+                    <div class="price-card">Rp {{ $item->price }}</div>
+                    <div>
+                      <a href="{{ route('detail_produk', $item->slug) }}" class="buy"
+                        >Beli</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+          @endforeach
         </div>
         <div class="button-lihat-semua">
-          <a href="#" class="button-lihat-produk">Lihat Semua</a>
+          <a href="/product" class="button-lihat-produk">Lihat Semua</a>
         </div>
       </div>
     </section>

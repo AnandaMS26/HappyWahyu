@@ -12,20 +12,17 @@
         <table>
             <tr>
                 <td><b>Name</b></td>
-                <td>Lala</td>
-            </tr>
-            <tr>
-                <td><b>Phone</b> </td>
-                <td>08123456788</td>
+                <td>{{ Auth::user()->username }}</td>
             </tr>
             <tr>
                 <td><b>Address</b></td>
-                <td>Bandung</td>
+                <td>{{ Auth::user()->address }}</td>
             </tr>
         </table>
         <div style="background-color: orangered; color:white; padding: 5px">
             Your Product
         </div>
+        <?php $no = 1 ?>
         <table>
             <tr>
                 <td><b>No</b></td>
@@ -34,36 +31,25 @@
                 <td><b>Subtotal</b> </td>
             </tr>
             <tr>
-                <td>1.</td>
-                <td>Wagyu Meat</td>
+                <td>{{ $no++ }}</td>
+                <td>{{$item->meat_package->title}}</td>
                 <td>1</td>
-                <td>Rp 200.000</td>
+                <td>Rp {{ $item->meat_package->price }}</td>
             </tr>
-            <tr>
-                <td>2.</td>
-                <td>Wagyu Meat</td>
-                <td>1</td>
-                <td>Rp 200.000</td>
-            </tr>
-            <tr>
-                <td>3.</td>
-                <td>Wagyu Meat</td>
-                <td>1</td>
-                <td>Rp 200.000</td>
         </table>
         <div class="total-price">
             <table>
                 <tr>
-                    <td style="width: 70%">Subtotal</td>
-                    <td>Rp 200.000</td>
+                    <td style="width: 7%">Subtotal</td>
+                    <td>Rp {{ $item->meat_package->price }}</td>
                 </tr>
                 <tr>
                     <td>Tax</td>
-                    <td>Rp 200.000</td>
+                    <td>Rp 20.000</td>
                 </tr>
                 <tr>
                     <td><h4>Total</h4></td>
-                    <td>Rp 400.000</td>
+                    <td>Rp {{$item->meat_package->price + 20000}}</td>
                 </tr>
             </table>
         </div>
