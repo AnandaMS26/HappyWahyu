@@ -63,11 +63,11 @@ Route::get('/product', 'App\Http\Controllers\ProdController@index')
 Route::get('/detail_produk/{slug}', 'App\Http\Controllers\DetailController@index')
     ->name('detail_produk');
 
-Route::get('/checkout/{id}', 'App\Http\Controllers\CheckoutController@process')
+Route::post('/checkout/{id}', 'App\Http\Controllers\CheckoutController@process')
     ->name('checkout_process')
     ->middleware(['auth', 'verified']);
 
-Route::post('/checkout/{id}', 'App\Http\Controllers\CheckoutController@index')
+Route::get('/checkout/{id}', 'App\Http\Controllers\CheckoutController@index')
     ->name('checkout')
     ->middleware(['auth', 'verified']);
 

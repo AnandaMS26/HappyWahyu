@@ -22,13 +22,14 @@
         <div style="background-color: orangered; color:white; padding: 5px">
             Your Product
         </div>
-        <?php $no = 1 ?>
+        <?php $no = 1;
+        $transaction_total = $item->meat_package->price + 20000;?>
         <table>
             <tr>
                 <td><b>No</b></td>
                 <td><b>Product</b> </td>
                 <td><b>Quantity</b> </td>
-                <td><b>Subtotal</b> </td>
+                <td><b>Harga</b> </td>
             </tr>
             <tr>
                 <td>{{ $no++ }}</td>
@@ -49,7 +50,7 @@
                 </tr>
                 <tr>
                     <td><h4>Total</h4></td>
-                    <td>Rp {{$item->meat_package->price + 20000}}</td>
+                    <td>Rp {{$transaction_total}}</td>
                 </tr>
             </table>
         </div>
