@@ -54,24 +54,9 @@
           comfortable with all good services.
         </p> -->
         <div class="filter-container">
-          {{-- <div class="category-head">
-            <ul>
-              <div class="category-title active" id="all">
-                <li>All</li>
-              </div>
-              <div class="category-title" id="rib">
-                <li>Rib</li>
-              </div>
-              <div class="category-title" id="tenderloin">
-                <li>Tenderloin</li>
-              </div>
-              <div class="category-title" id="chunk">
-                <li>Chunk</li>
-              </div>
-            </ul>
-          </div> --}}
           <div class="product-grid">
             @foreach ($items as $item)
+            <?php $deskripsi = substr($item->desc, 0, 30) ?>
               <div href="/detail-product" class="product-card rib">
                 <div class="card-thumbnail-product-1" style="background-image: url('{{ $item->galleries->count() ? Storage::url
                   ($item->galleries->first()->image) : '' }}')">
@@ -82,7 +67,7 @@
                     <a href="{{ route('detail_produk', $item->slug) }}">{{ $item->title }}</a>
                   </h2>
                   <p class="caption-card">
-                    {{ $item->about }}
+                    {{ $deskripsi }}
                     </p>
                   <div class="price-cart-card">
                     <div class="price-card">Rp {{ $item->price }}</div>
@@ -95,68 +80,6 @@
                 </div>
               </div>
               @endforeach
-            {{-- <div href="/detail-product" class="product-card rib">
-              <div class="card-thumbnail-product-1" style="background-image: url(frontend/image/daging/Image.png)">
-                <span class="category-name">Rib</span>
-              </div>
-              <div class="card-content-product">
-                <h2 class="heading-card-product">
-                  <a href="/detail-product">Boneless prime rib | Miyazakgyu Japanese Wagyu</a>
-                </h2>
-                <p class="caption-card">
-                    There are 10 secret tips that you have to know for managing
-                    your team remotely.
-                  </p>
-                <div class="price-cart-card">
-                  <div class="price-card">Rp.290000/kg</div>
-                  <div>
-                    <a href="mycart" class="buy"
-                      ><i class="fas fa-shopping-cart"></i>Add</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div href="/detail-product" class="product-card w-inline-block">
-              <div class="card-thumbnail-product-2" style="background-image: url(frontend/image/daging/Image-1.png)"></div>
-              <div class="card-content-product">
-                <h2 class="heading-card-product">
-                  <a href="/detail-product">Boneless prime rib | Miyazakgyu Japanese Wagyu</a>
-                </h2>
-                <p class="caption-card">
-                    There are 10 secret tips that you have to know for managing
-                    your team remotely.
-                  </p>
-                <div class="price-cart-card">
-                  <div class="price-card">Rp.290000/kg</div>
-                  <div>
-                    <a href="mycart" class="buy"
-                      ><i class="fas fa-shopping-cart"></i>Add</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="product-card w-inline-block">
-              <div class="card-thumbnail-product-3" style="background-image: url(frontend/image/daging/Image-2.png)"></div>
-              <div class="card-content-product">
-                <h2 class="heading-card-product">
-                    <a href="/detail-product">Boneless prime rib | Miyazakgyu Japanese Wagyu</a>
-                  </h2>
-                  <p class="caption-card">
-                      There are 10 secret tips that you have to know for managing
-                      your team remotely.
-                    </p>
-                <div class="price-cart-card">
-                  <div class="price-card">Rp.290000/kg</div>
-                  <div>
-                    <a href="/mycart" class="buy"
-                      ><i class="fas fa-shopping-cart"></i>Add</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div> --}}
           </div>
         </div>
         <div class="button-loading">

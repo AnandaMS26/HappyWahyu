@@ -1,10 +1,37 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 
 @section('title')
 Happy Meat
 @endsection
 
-@section('content')
+@section('content') --}}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url('frontend/css/homepage.css') }}" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/main.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+  </head>
+  <body class="body">
+    <div class="header">
+      @include('../includes/navbar')
+    </div>
  <!-- Header -->
     <header class="section-hero-lp">
       <div class="container-hero-lp">
@@ -20,7 +47,7 @@ Happy Meat
             </p>
           </div>
           <div class="right-block-hero-lp">
-            <img class="image-hero-lp" src="{{ url('frontend/image/Image.png') }}" />
+            <img class="image-hero-lp" src="{{ url('frontend/image/image.png') }}" />
           </div>
         </div>
       </div>
@@ -83,54 +110,9 @@ Happy Meat
           pembelian daging sapi segar, impor beku hingga aneka frozen food.
           Hubungi kami segera untuk mendapatkan penawaran terbaik.
         </p>
-        {{-- <div class="product-grid">
-          <div href="#" class="product-card business">
-            <div class="card-thumbnail-product-1">
-              <span class="category-name">business</span>
-            </div>
-            <div class="card-content-product">
-              <h2 class="heading-card-product">Daging Wahyu Premium</h2>
-              <div class="price-cart-card">
-                <div class="price-card">Rp.290000/kg</div>
-                <div>
-                  <a href="#" class="buy"
-                    ><i class="fas fa-shopping-cart"></i>Add</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div href="#" class="product-card w-inline-block">
-            <div class="card-thumbnail-product-2" style="background-image: url(frontend/image/daging/Image-1.png)"></div>
-            <div class="card-content-product">
-              <h2 class="heading-card-product">Daging Wahyu Premium</h2>
-              <div class="price-cart-card">
-                <div class="price-card">Rp.290000/kg</div>
-                <div>
-                  <a href="#" class="buy"
-                    ><i class="fas fa-shopping-cart"></i>Add</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div href="#" class="product-card w-inline-block">
-            <div class="card-thumbnail-product-3"></div>
-            <div class="card-content-product">
-              <h2 class="heading-card-product">Daging Wahyu Premium</h2>
-              <div class="price-cart-card">
-                <div class="price-card">Rp.290000/kg</div>
-                <div>
-                  <a href="#" class="buy"
-                    ><i class="fas fa-shopping-cart"></i>Add</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> --}}
         <div class="product-grid">
           @foreach ($latest_product as $items => $item)
+          <?php $deskripsi = substr($item->desc, 0, 30) ?>
               <div href="" class="product-card rib">
                 <div class="card-thumbnail-product-1" style="background-image: url('{{ $item->galleries->count() ? Storage::url
                   ($item->galleries->first()->image) : '' }}')">
@@ -141,7 +123,7 @@ Happy Meat
                     <a href="{{ route('detail_produk', $item->slug) }}">{{ $item->title }}</a>
                   </h2>
                   <p class="caption-card">
-                    {{ $item->about }}
+                    {{ $deskripsi }} ...
                     </p>
                   <div class="price-cart-card">
                     <div class="price-card">Rp {{ $item->price }}</div>
@@ -169,71 +151,37 @@ Happy Meat
           berita terkini seputar daging sapi
         </p>
         <div class="article-grid">
-          <a href="#" class="article-card w-inline-block">
-            <div class="card-thumbnail-article-1"></div>
+        @foreach ($latest_article as $artikel)
+        <?php $deskripsi = substr($artikel->desc, 0, 30) ?>
+          <a href="{{ route('detail_artikel', $artikel->slug) }}" class="article-card w-inline-block">
+            <div class="card-thumbnail-article-1" style="background-image: url('{{ $artikel->artikel_galleries->count() ? Storage::url
+              ($artikel->artikel_galleries->first()->image) : '' }}')"></div>
             <div class="card-content-article">
               <div>
                 <h2 class="heading-card-article">
-                  10 secret tips for managing report team
+                  {{ $artikel->title }} 
                 </h2>
                 <p class="caption-card">
-                  There are 10 secret tips that you have to know for managing
-                  your team remotely. Don’t let this situatuon make the team
-                  feel uncomfortable
+                  {{$deskripsi}} ...
                 </p>
               </div>
               <div class="author-date-card">
                 <div class="avatar-1"></div>
-                <div class="author-name">Danielo Adnan</div>
-                <div class="publish-date">28 Juni 2020</div>
+                <div class="author-name">{{ $artikel->writer }}</div>
+                <div class="publish-date">{{ $artikel->publish }}</div>
               </div>
             </div>
           </a>
-          <a href="#" class="article-card w-inline-block">
-            <div class="card-thumbnail-article-2"></div>
-            <div class="card-content-article">
-              <div>
-                <h2 class="heading-card-article">
-                  10 secret tips for managing report team
-                </h2>
-                <p class="caption-card">
-                  There are 10 secret tips that you have to know for managing
-                  your team remotely. Don’t let this situatuon make the team
-                  feel uncomfortable
-                </p>
-              </div>
-              <div class="author-date-card">
-                <div class="avatar-1"></div>
-                <div class="author-name">Danielo Adnan</div>
-                <div class="publish-date">28 Juni 2020</div>
-              </div>
-            </div>
-          </a>
-          <a href="#" class="article-card w-inline-block">
-            <div class="card-thumbnail-article-3"></div>
-            <div class="card-content-article">
-              <div>
-                <h2 class="heading-card-article">
-                  10 secret tips for managing report team
-                </h2>
-                <p class="caption-card">
-                  There are 10 secret tips that you have to know for managing
-                  your team remotely. Don’t let this situatuon make the team
-                  feel uncomfortable
-                </p>
-              </div>
-              <div class="author-date-card">
-                <div class="avatar-1"></div>
-                <div class="author-name">Danielo Adnan</div>
-                <div class="publish-date">28 Juni 2020</div>
-              </div>
-            </div>
-          </a>
+          @endforeach
         </div>
         <div class="button-lihat-semua">
-          <a href="#" class="button-lihat-article">Lihat Semua</a>
+          <a href="/article" class="button-lihat-article">Lihat Semua</a>
         </div>
       </div>
     </section>
     </main>
-@endsection
+
+@include('../includes/footer')
+
+</body>
+</html>

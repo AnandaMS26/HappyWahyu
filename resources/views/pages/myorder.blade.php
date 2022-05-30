@@ -19,7 +19,7 @@
             <div class="col-md-5 profile">
                 <div class="profile-name">
                     <div class="profile-photo"><img src="img/meatt.png" alt=""></div>
-                    <h3 class="user-name">Star Butterfly</h3>
+                    <h3 class="user-name">Hallo {{ Auth::user()->username }}!</h3>
                 </div>
                 <div class="profile-title">
                     <p><a href="/my-account" class="title">My Account</a></p>
@@ -30,27 +30,32 @@
             <div class="col-md-7 order">
                 <h4>My Orders</h4>
                 <table>
+                    <?php $no = 1 ?>
                     <tr>
                         <th>No</th>
-                        <th>Order ID</th>
+                        {{-- <th>Order ID</th> --}}
                         <th>Date</th>
+                        <th>Product</th>
                         <th>Status</th>
-                        <th></th>
+                        <th>Price</th>
                     </tr>
+                    @forelse ($items as $item)
+                        <tr>
+                            <td>{{ $no++ }}</td>
+                            {{-- <td>{{ $item->id }}</td> --}}
+                            <td>{{ $item->created_at }}</td>
+                            <td>{{ $item->meat_package->title }}</td>
+                            <td>{{ $item->transaction_status }}</td>
+                            {{-- <td><a href="{{ route('detail-order', $item->id) }}" type="button" class="detail-btn">Detail</a></td> --}}
+                            <td>{{ $item->meat_package->price }}</td>
+                        </tr>
+                    @empty
                     <tr>
-                        <td>1</td>
-                        <td>ASDFGHJKL123</td>
-                        <td>23 - 03 - 2022</td>
-                        <td>Shipping</td>
-                        <td><a href="/detail-order" type="button" class="detail-btn">Detail</a></td>
+                        <td colspan="7" class="text-center">
+                            Data Kosong
+                        </td>
                     </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>ASDFGHJKL123</td>
-                        <td>23 - 03 - 2022</td>
-                        <td>Shipping</td>
-                        <td><a href="/detail-order" type="button" class="detail-btn">Detail</a></td>
-                    </tr>
+                    @endforelse
                 </table>
             </div>
         </div>

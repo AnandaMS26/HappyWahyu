@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>Tentang Kami</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -19,38 +19,29 @@
     <div class="section">
         <div class="container">
             <div class="title">
-                <h1>About <h1 style="color: orangered;">Happy Meat</h1> </h1>
+                <h1>Tentang <h1 style="color: orangered;">Happy Meat</h1> </h1>
             </div>
             <div class="row mb-5">
                 <img src="{{ url('frontend/image/meat.png') }}" alt="happy meat">
                 <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    Happy Meat merupakan sebuah platform untuk membeli berbagai
+                    jenis daging sapi yang berbasis website. Selain itu, aplikasi ini juga menyediakan
+                    berbagai macam artikel informatif seputar daging sapi. Pada aplikasi ini, pengguna
+                    dapat langsung membaca artikel dan melihat produk daging sapi yang tersedia.
+                    Pengguna dapat melakukan transaksi pembelian daging sapi dengan mudah karena
+                    setiap produk memiliki detailnya seperti harga dan deskripsinya.
                 </p>
             </div>
             <div class="row mt-5" style="margin-top: 30px;">
-                {{-- <div class="image-section">
-                    <img src="{{ url('frontend/image/meat2.png') }}" alt="Happy Meat">
-                </div>
-                <div class="content">
-                    <div class="article">
-                            <h1 style="color: orangered; margin-top: 20px; margin-left: 20px;">History</h1>
-                            <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-                                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                            </p>
-                    </div>
-                </div> --}}
                 <div class="col image-responsive">
                     <img src="{{ url('frontend/image/meat2.png') }}" alt="Happy Meat" style="float:">
                 </div>
                 <div class="col">
                     <h1 style="color: orangered;">History</h1>
                             <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                                Happy Meat berdiri pada tahun 2022. Latar belakang didirikannya Happy Meat berawal dari permasalahan yang terjadi di lingkungan sekitar, 
+                                yaitu haga daging sapi yang tidak stabil dan cenderung naik melonjak membuat masyarakat kekurangan informasi akan hal tersebut. Oleh karena itu, kami hadir untuk membantu Anda untuk membeli serta mengetahui harga daging sapi di pasaran. 
+                                Happy Shopping Meates!
                             </p>
                 </div>
             </div>

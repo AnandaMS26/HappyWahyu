@@ -21,11 +21,23 @@
             <i class="fas fa-fw fa-hotel"></i>
             <span>Paket Daging</span></a>
     </li>
-
+    
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('artikel-package.index') }}">
+            <i class="fas fa-fw fa-hotel"></i>
+            <span>Artikel</span></a>
+    </li>
+    
     <li class="nav-item">
         <a class="nav-link" href="{{ route('gallery.index') }}">
             <i class="fas fa-fw fa-images"></i>
             <span>Galleri Daging</span></a>
+    </li>
+    
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('artikel-gallery.index') }}">
+            <i class="fas fa-fw fa-images"></i>
+            <span>Galleri Artikel</span></a>
     </li>
 
     <li class="nav-item">

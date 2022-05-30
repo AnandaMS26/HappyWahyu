@@ -44,26 +44,30 @@
                     <td style="width: 7%">Subtotal</td>
                     <td>Rp {{ $item->meat_package->price }}</td>
                 </tr>
-                <tr>
-                    <td>Tax</td>
-                    <td>Rp 20.000</td>
-                </tr>
+                <!--<tr>-->
+                <!--    <td>Tax</td>-->
+                <!--    <td>Rp 20.000</td>-->
+                <!--</tr>-->
                 <tr>
                     <td><h4>Total</h4></td>
-                    <td>Rp {{$transaction_total}}</td>
+                    <td>Rp {{ $item->meat_package->price }}</td>
                 </tr>
             </table>
         </div>
         <hr>
-        <div class="dropdown">
-            <button style="background-color: orangered; color: white; width: 35%; float: right" class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              Metode Pembayaran
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">ATM</a></li>
-              <li><a class="dropdown-item" href="#">Gopay</a></li>
-            </ul>
-          </div>
+        <a href="{{ route('checkout-success', $item->id) }}" class="btn btn-block btn-join-now mt-3 py-2">
+                                    Process Payment
+                                </a>
+                            </div>
+        <!--<div class="dropdown">-->
+        <!--    <button style="background-color: orangered; color: white; width: 35%; float: right" class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">-->
+        <!--      Metode Pembayaran-->
+        <!--    </button>-->
+        <!--    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">-->
+        <!--      <li><a class="dropdown-item" href="#">ATM</a></li>-->
+        <!--      <li><a class="dropdown-item" href="#">Gopay</a></li>-->
+        <!--    </ul>-->
+        <!--  </div>-->
     </div>
 </div>
 @endsection

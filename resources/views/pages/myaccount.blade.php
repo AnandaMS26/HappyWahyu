@@ -19,7 +19,7 @@
             <div class="col-md-5 profile">
                 <div class="profile-name">
                     <div class="profile-photo"><img src="img/meatt.png" alt=""></div>
-                    <h3 class="user-name">{{ Auth::user()->username }}</h3>
+                    <h3 class="user-name">Halo {{ Auth::user()->username }}!</h3>
                 </div>
                 <div class="profile-title">
                     <p><a href="" class="active">My Account</a></p>

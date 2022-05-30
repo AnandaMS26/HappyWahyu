@@ -48,7 +48,7 @@
                         <th>ID</th>
                         <th>Nama</th>
                         <th>Alamat</th>
-                        <th>No Hp</th>
+                        {{-- <th>No Hp</th> --}}
                     </tr>
                     @foreach($item->details as $detail)
                         <tr>
