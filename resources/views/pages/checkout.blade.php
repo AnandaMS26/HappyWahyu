@@ -6,7 +6,7 @@
 <div class="main">
     <div class="container" style="width: 80%;">
         <h1 style="color: black">Checkout</h1>
-        <div style="background-color: orangered; color:white; padding: 5px">
+        <div style="background-color: #FC5043; color:white; padding: 5px">
             Your Information
         </div>
         <table>
@@ -19,7 +19,7 @@
                 <td>{{ Auth::user()->address }}</td>
             </tr>
         </table>
-        <div style="background-color: orangered; color:white; padding: 5px">
+        <div style="background-color: #FC5043; color:white; padding: 5px">
             Your Product
         </div>
         <?php $no = 1;
@@ -56,7 +56,7 @@
         </div>
         <hr>
         <div class="dropdown">
-            <button style="background-color: orangered; color: white; width: 35%; float: right" class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <button style="background-color: #FC5043; color: white; width: 35%; float: right" class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
               Metode Pembayaran
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">

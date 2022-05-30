@@ -21,7 +21,7 @@
                 <p>ASDFGHJKL123</p>
             </div>
             <div class="order-content">
-                <h5>Nama</h5>
+                <h5>name</h5>
                 <p>Star Butterfly</p>
             </div>
             <div class="order-content">

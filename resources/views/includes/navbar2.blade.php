@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
-    <link rel="stylesheet" href="{{ url('frontend/css/style.css') }}" />
+    <link rel="stylesheet" href="{{ url('frontend/css/style2.css') }}" />
 </head>
 <body>
     <div class="header">

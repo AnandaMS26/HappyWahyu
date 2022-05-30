@@ -73,7 +73,7 @@ h3 {
 /************************/
 /* NAVBAR */
 /************************/
-.header {
+/* .header {
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: hsl(220, 60%, 95%, 0.2);
@@ -111,7 +111,7 @@ h3 {
   color: #6d7d8b;
   font-size: 14px;
   font-family: "Mulish", sans-serif;
-}
+} */
 /************************/
 /* HERO SECTION */
 /************************/
@@ -396,6 +396,16 @@ h3 {
   -ms-transform: translate(0px, -2px);
   transform: translate(0px, -2px);
 }
+.heading-card-product a{
+  color: #24262b;
+  opacity: 0.8;
+  font-weight: 700;
+}
+.heading-card-product a:hover{
+  text-decoration: none;
+  opacity: 1;
+  color: #24262b;
+}
 
 .card-thumbnail-product-1 {
   height: 204px;
@@ -585,6 +595,15 @@ h3 {
   margin-bottom: 16px;
   margin-top: 16px;
   line-height: 163.2%;
+  color: #24262b;
+  opacity: 0.8;
+  font-weight: 700;
+}
+.heading-card-article:hover{
+  opacity: 1;
+}
+.article-grid a:hover{
+  text-decoration: none;
 }
 
 .caption-card {
@@ -843,6 +862,18 @@ ul {
     width: 50%;
     margin-bottom: 30px;
   }
+  .article-card, .product-card, .conten-wrapper-section-what{
+    margin: 0 auto;
+  }
+  .card-content-product, .card-content-article{
+    text-align: center;
+  }
+  /* .left-block-hero-lp{
+    max-width: 300px;
+  }
+  .section-what-img-box{
+    margin: 0 auto 30px auto;
+  } */
 }
 
 @media screen and (max-width: 479px) {

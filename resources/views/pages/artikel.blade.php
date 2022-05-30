@@ -22,7 +22,7 @@
   </head>
   <body class="body">
     <div class="header">
-      @include('../includes/navbar')
+      @include('../includes/navbar2')
     </div>
     <section class="section-hero">
       <div class="container-hero">

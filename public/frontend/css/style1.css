@@ -5,38 +5,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* NAVBAR */
-.header{
-    position: fixed;
-    width: 88%;
-    z-index: 10;
-    background-color: white;
-    height: 85px;
-}
-.header li{
-    list-style: none;
-}
-.header-logo {
-    float: left;
-} 
-.list-left li {
-    float: left;
-    padding: 20px 35px 20px 0px;
-}
-.list-right li {
-    float: right;
-    padding: 20px 10px;
-}
-.header img{
-    position: relative;
-    width: 80%;
-    top: -8px;
-}
-.header a{
-    text-decoration: none;
-    color: #6D7D8B;
-    font-size: 15px;
-}
 /*  */
 .section{
     width: 100%;
