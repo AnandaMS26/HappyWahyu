@@ -21,7 +21,7 @@
                     <li><a href="/">Beranda</a></li>
                     <li><a href="/product">Produk</a></li>
                     <li><a href="/article">Artikel</a></li>
-                    <li><a href="/aboutus">About</a></li>
+                    <li><a href="/aboutus">Tentang</a></li>
                 </ul>
             </div>
 
@@ -42,7 +42,7 @@
                 <li><a href="/my-account">{{ Auth::user()->username }}</a></li>    
                 <li><form action="{{ url('logout') }}" method="POST">
                     @csrf
-                    <input type="submit" value="Logout">
+                    <button style="background: white; border-style: none; color: #6D7D8B; text-decoration: none" class="btn btn-danger" type="submit" value="Logout"><b>Logout</b></button>
                   </form></li>
                 <!-- <li><i class="fa fa-shopping-cart"></i></li> -->
                 {{-- <li><a href="/mycart"><i class="fa fa-shopping-cart"></i></a></li> --}}

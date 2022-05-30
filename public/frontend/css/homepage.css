@@ -141,6 +141,7 @@ h3 {
   font-size: 16px;
   line-height: 163.2%;
   font-family: "Mulish", sans-serif;
+  text-align: justify;
 }
 
 .flexbox-hero-lp {
@@ -171,8 +172,8 @@ h3 {
   display: block;
   margin: 0 0 0 0;
   padding-left: 60px;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  /* padding-top: 80px; */
+  /* padding-bottom: 80px; */
   padding-right: 60px;
   overflow: hidden;
   background: #ffffff;
@@ -241,9 +242,9 @@ h3 {
 /************************/
 .section-why {
   padding-left: 60px;
-  padding-top: 80px;
+  /* padding-top: 80px; */
   padding-right: 60px;
-  padding-bottom: 80px;
+  /* padding-bottom: 80px; */
   display: block;
   overflow: hidden;
   background-color: hsl(220, 60%, 95%, 0.2);
@@ -252,7 +253,7 @@ h3 {
 .container-why {
   display: block;
   padding-left: 30px;
-  padding-top: 5em;
+  /* padding-top: 5em; */
   padding-right: 30px;
   padding-bottom: 5em;
   margin-right: auto;
@@ -437,6 +438,7 @@ h3 {
   color: #fff;
   padding: 4px 10px;
   border-radius: 2px;
+  background: #00a7ea;
 }
 
 .business .category-name {

@@ -18,19 +18,19 @@
         <div class="col-md-5 detail-order">
             <div class="order-content">
                 <h5>Order ID</h5>
-                <p>ASDFGHJKL123</p>
+                <p>{{ ASDFGHJKL123 }}</p>
             </div>
             <div class="order-content">
-                <h5>name</h5>
-                <p>Star Butterfly</p>
+                <h5>Nama</h5>
+                <p>{{ Auth::user()->username }}</p>
             </div>
             <div class="order-content">
                 <h5>Alamat</h5>
-                <p>ASDFGHJKL123Jl. Mewni Utara no. 30 Oklahoma Amerika Serikat</p>
+                <p>{{ Auth::user()->address }}</p>
             </div>
             <div class="order-content">
                 <h5>Produk</h5>
-                <p>Boneless Prime Rib</p>
+                <p>{{ $item->meat_package->title }}</p>
             </div>
             <div class="order-content">
                 <h5>Jumlah</h5>

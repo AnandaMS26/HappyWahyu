@@ -10,6 +10,8 @@ class Transaction extends Model
 {
     use softDeletes;
 
+    protected $primaryKey = 'id';
+
     protected $fillable = [
         'meat_packages_id', 'users_id', 'transaction_total',
         'transaction_status'
