@@ -7,7 +7,7 @@
 /************************/
 /* NAVBAR SECTION */
 /************************/
-.header {
+/* .header {
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: hsl(220, 60%, 95%, 0.2);
@@ -44,7 +44,7 @@
   text-decoration: none;
   color: #6d7d8b;
   font-size: 15px;
-}
+} */
 
 /************************/
 /* HERO SECTION */
@@ -177,6 +177,11 @@
   margin-bottom: 16px;
   margin-top: 16px;
   line-height: 163.2%;
+  color: #24262b;
+  opacity: 0.8;
+}
+.heading-card-article:hover{
+  opacity: 1;
 }
 
 .caption-card {
@@ -387,6 +392,12 @@ ul {
   .footer-col {
     width: 50%;
     margin-bottom: 30px;
+  }
+  .article-card{
+    margin: 0 auto;
+  }
+  .card-content-article{
+    text-align: center;
   }
 }
 

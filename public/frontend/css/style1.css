@@ -5,38 +5,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* NAVBAR */
-.header{
-    position: fixed;
-    width: 88%;
-    z-index: 10;
-    background-color: white;
-    height: 85px;
-}
-.header li{
-    list-style: none;
-}
-.header-logo {
-    float: left;
-} 
-.list-left li {
-    float: left;
-    padding: 20px 35px 20px 0px;
-}
-.list-right li {
-    float: right;
-    padding: 20px 10px;
-}
-.header img{
-    position: relative;
-    width: 80%;
-    top: -8px;
-}
-.header a{
-    text-decoration: none;
-    color: #6D7D8B;
-    font-size: 15px;
-}
 /*  */
 .section{
     width: 100%;
@@ -99,64 +67,97 @@ p{
 }
 
 /* OUR TEAM */
-.team-section{
+.section-team {
+    padding-left: 60px;
+    padding-top: 80px;
+    padding-right: 60px;
+    /* padding-bottom: 80px; */
+    display: block;
+    overflow: hidden;
+    background-color: hsl(220, 60%, 95%, 0.2);
+  }
+  
+  .container-team {
+    display: block;
+    padding-left: 30px;
+    padding-top: 5em;
+    padding-right: 30px;
+    padding-bottom: 5em;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
     width: 100%;
-}
-
-.team-section .container{
-    width: 100%;
-    margin: auto;
-}
-
-.team-section .container .row{
-    width: 100%;
-    margin: auto;
-}
-
-.team-section .container .row .title{
+    max-width: 1160px;
+    position: static;
+  }
+  
+  .heading-section-team {
+    font-size: 40px;
+    font-family: "Mulish", sans-serif;
     text-align: center;
-    margin-top: 50px;
-}
-
-.team-section .container .row .title h1{
-    font-size: 35px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-}
-
-.team-section .container .team-card{
+    line-height: 163.2%;
+    margin-bottom: 60px;
+  }
+  
+  .section-team-description {
+    font-size: 16px;
+    font-family: "Mulish", sans-serif;
+    text-align: center;
+    line-height: 163.2%;
+    margin-bottom: 128px;
+  }
+  
+  .section-team-images-description {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.team-section .container .team-card .card{
-    width: 100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    cursor: pointer;
-}
-
-.team-section .container .row .col p{
+    justify-content: space-between;
+    /*align-items: stretch;*/
+    /*padding: 20px;*/
+    flex-wrap: wrap;
+  }
+  
+  .section-team-images-description .col {
+    padding: 0 30px;
+    flex-basis: 25%;
     text-align: center;
-}
-.team-section .container .row .col h4{
-    font-size: 15px;
+  }
+  
+  .section-team-images-description .col h4 {
     text-align: center;
-}
-
-.team-section .container .row .col img{
-    height: auto;
-    width: auto;
+    margin-top: 32px;
+    font-size: 24px;
+  }
+  
+  .section-team-images-description .col p {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 12px;
+  }
+  
+  .section-team-images-description .col img {
+    height: 150px;
+    width: 150px;
     border-radius: 50%;
-    border: 6px solid #fff;
-    /* margin-left: 20px; */
-    padding: 10px;
-}
-
+  }
+  
+  @media (max-width: 991px) {
+    .section-team-images-description .col {
+      flex-basis: 100%;
+      margin-bottom: 65px;
+    }
+    .section-team-images-description .col:last-child {
+      margin-bottom: 0;
+    }
+    .section-team-images-description .col p {
+      padding: 0;
+    }
+  }
+  
 
 /* Cart */
 .cart-page{
@@ -174,7 +175,7 @@ table{
 }
 
 .cart-info p{
-    color: orangered;
+    color: #FC5043;
 }
 .cart-info .info{
     margin-top: 30px;
@@ -184,7 +185,7 @@ th{
     text-align: left;
     padding: 5px;
     color: #fff;
-    background: #ff523b;
+    background: #FC5043;
     font-weight: normal;
 }
 
@@ -199,7 +200,7 @@ td input{
 }
 
 td a{
-    color: #ff523b;
+    color: #FC5043;
     font-size: 12px;
 }
 
@@ -216,27 +217,27 @@ td img{
 }
 
 .total-price table{
-    border-top: 3px solid #ff523b;
+    border-top: 3px solid #FC5043;
     width: 100%;
     /* max-width: 350px; */
 }
 
-button{
-    background-color: #ff523b;
+.back-btn{
+    background-color: #FC5043;
     width: 100%;
     padding: 10px;
     color: #fff;
-    border-color: #ff523b;
+    border-color: #FC5043;
     border-radius: 5px;
 }
 
 /* Detail Artikel */
 .card-header{
-    background-color: orangered; 
+    background-color: #FC5043; 
     color: white;
 }
 .card-body{
-    border-color: orangered;
+    border-color: #FC5043;
 }
 .card-body img{
     width: auto;

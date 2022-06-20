@@ -4,31 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{{ url('frontend/css/artikel.css') }}" />
+   <link rel="stylesheet" href="{{ url('frontend/css/artikel.css') }}" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mulish&display=swap"
-      rel="stylesheet"
-    />
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet"/>
+    <link href="frontend/image/logo.png" rel="shortcut icon" >
+    <title>Artikel Happy Meat</title>
   </head>
   <body class="body">
     <div class="header">
-      @include('../includes/navbar')
+      @include('../includes/navbar2')
     </div>
     <section class="section-hero">
       <div class="container-hero">
         <div class="flexbox-hero">
           <div class="right-block-hero">
-            <img class="image-hero" src="frontend/image/Image.png" />
+            <img class="image-hero" src="frontend/image/image.png" />
           </div>
           <div class="left-block-hero">
             <h2 class="hero-heading">Artikel Happy Meat</h2>
@@ -115,9 +107,9 @@
             </div>
           </a> --}}
         </div>
-        <div class="button-loading">
-          <a href="#" class="button-loading-article">Load More</a>
-        </div>
+        <!--<div class="button-loading">-->
+        <!--  <a href="#" class="button-loading-article">Load More</a>-->
+        <!--</div>-->
       </div>
     </section>
     

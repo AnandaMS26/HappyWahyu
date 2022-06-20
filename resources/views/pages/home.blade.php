@@ -13,27 +13,19 @@ Happy Meat
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{{ url('frontend/css/homepage.css') }}" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mulish&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet"/>
+    <link href="frontend/image/logo.png" rel="shortcut icon" >
     <script src="js/main.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Happy Meat</title>
   </head>
   <body class="body">
     <div class="header">
-      @include('../includes/navbar')
+      @include('../includes/navbar2')
     </div>
- <!-- Header -->
-    <header class="section-hero-lp">
+
+   <section class="section-hero-lp">
       <div class="container-hero-lp">
         <div class="flexbox-hero-lp">
           <div class="left-block-hero-lp">
@@ -47,13 +39,13 @@ Happy Meat
             </p>
           </div>
           <div class="right-block-hero-lp">
-            <img class="image-hero-lp" src="{{ url('frontend/image/image.png') }}" />
+            <img class="image-hero-lp" src="frontend/image/image.png" />
           </div>
         </div>
       </div>
-    </header>
+    </section>
 
-    <main>
+
     <section class="section-what">
       <div class="container-section-what">
         <div class="flexbox-section-what">
@@ -179,7 +171,6 @@ Happy Meat
         </div>
       </div>
     </section>
-    </main>
 
 @include('../includes/footer')
 

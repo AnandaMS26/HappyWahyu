@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="frontend/image/logo.png" rel="shortcut icon" >
     <title>My Account</title>
 </head>
 <body>
@@ -22,8 +23,8 @@
                     <h3 class="user-name">Halo {{ Auth::user()->username }}!</h3>
                 </div>
                 <div class="profile-title">
-                    <p><a href="" class="active">My Account</a></p>
-                    <p><a href="/my-order" class="title">My Order</a></p>
+                    <p><a href="" class="active">Akun Saya</a></p>
+                    <p><a href="/my-order" class="title">Pesanan</a></p>
                     {{-- <p><a href="" class="title">Log Out</a></p> --}}
                 </div>
             </div>
@@ -31,7 +32,7 @@
                 <div class="account-part">
                     <form action="">
                         <div class="box-account">
-                            <h6>Username</h6>
+                            <h6>Nama Pengguna</h6>
                             <input type="text" class="form-control" style="background-color: white" placeholder="Username" value="{{ Auth::user()->username }}" disabled>
                         </div>
                         <div class="box-account">

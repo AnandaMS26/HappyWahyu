@@ -1,13 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MyAccountController;
 use App\Http\Controllers\Admin\MeatPackageController;
 use App\Http\Controllers\Admin\ArtikelPackageController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\ArtikelGalleryController;
 use App\Http\Controllers\Admin\TransactionController;
 use App\Http\Controllers\Admin\CheckoutController;
+use App\Http\Controllers\MidtransController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,6 +41,10 @@ Route::get('/my-account', function(){
 // Route::get('/my-order', function(){
 //     return view('pages/myorder');
 // });
+
+Route::get('/my-order', 'App\Http\Controllers\MyOrderController@index')
+    ->name('my-order');
+    
 Route::get('/detail-order', function(){
     return view('pages/detail_order');
 });
@@ -50,25 +54,15 @@ Route::get('/checkout-order', function(){
 Route::get('/mycart', function(){
     return view('pages/cart');
 });
-// Route::get('/detail-artikel', function(){
-//     return view('pages/detail_artikel');
-// });
+Route::get('/detail-artikel', function(){
+    return view('pages/detail_artikel');
+});
 // Route::get('/product', function(){
 //     return view('pages/produk');
 // });
-// Route::get('/article', function(){
-//     return view('pages/artikel');
-// });
-// Route::resource('my-account', MyAccountController::class);
-
-// Route::get('/my-account', 'App\Http\Controllers\MyAccountController@index')
-//     ->name('my-account');
-
-Route::get('/my-order', 'App\Http\Controllers\MyOrderController@index')
-    ->name('my-order');
-
-Route::get('/detail-order/{slug}', 'App\Http\Controllers\DetailOrderController@index')
-    ->name('detail-order');
+Route::get('/article', function(){
+    return view('pages/artikel');
+});
 
 Route::get('/product', 'App\Http\Controllers\ProdController@index')
     ->name('product');
@@ -76,12 +70,15 @@ Route::get('/product', 'App\Http\Controllers\ProdController@index')
 Route::get('/article', 'App\Http\Controllers\ArtikelController@index')
     ->name('article');
 
-Route::get('/detail_produk/{id}', 'App\Http\Controllers\DetailController@index')
+Route::get('/detail_produk/{slug}', 'App\Http\Controllers\DetailController@index')
     ->name('detail_produk');
 
 Route::get('/detail_artikel/{slug}', 'App\Http\Controllers\DetailArtikelController@index')
     ->name('detail_artikel');
 
+Route::get('/detail-order/{slug}', 'App\Http\Controllers\DetailOrderController@index')
+    ->name('detail-order');
+    
 Route::post('/checkout/{id}', 'App\Http\Controllers\CheckoutController@process')
     ->name('checkout_process')
     ->middleware(['auth', 'verified']);
@@ -114,4 +111,21 @@ Route::prefix('admin')
         Route::resource('artikel-gallery', ArtikelGalleryController::class);
         Route::resource('transaction', TransactionController::class);
     });
+    
 Auth::routes(['verify' => true]);
+
+//Midtrans
+Route::post('/midtrans/callback', 'App\Http\Controllers\MidtransController@notificationHandler');
+Route::get('/midtrans/finish', 'App\Http\Controllers\MidtransController@finishRedirect');
+Route::get('/midtrans/unfinish', 'App\Http\Controllers\MidtransController@unfinishRedirect');
+Route::get('/midtrans/error', 'App\Http\Controllers\MidtransController@errorRedirect');
+
+Route::get('/config-cache', function() {
+    Artisan::call('config:cache');
+    return 'Configuration cache cleared! <br> Configuration cached successfully!';
+});
+
+Route::get('/config-clear', function() {
+    Artisan::call('config:clear'); 
+    return 'Configuration cache cleared!';
+});

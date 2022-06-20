@@ -4,22 +4,22 @@
 
 @section('content')
 <div class="main">
-    <div class="container" style="width: 80%;">
+    <div class="container" style="width: 80%; padding-top: 5%">
         <h1 style="color: black">Checkout</h1>
-        <div style="background-color: orangered; color:white; padding: 5px">
+        <div style="background-color: #FC5043; color:white; padding: 5px">
             Your Information
         </div>
         <table>
             <tr>
                 <td><b>Name</b></td>
-                <td>{{ Auth::user()->username }}</td>
+                <td>{{ Auth::user()->name }}</td>
             </tr>
             <tr>
                 <td><b>Address</b></td>
                 <td>{{ Auth::user()->address }}</td>
             </tr>
         </table>
-        <div style="background-color: orangered; color:white; padding: 5px">
+        <div style="background-color: #FC5043; color:white; padding: 5px">
             Your Product
         </div>
         <?php $no = 1;
@@ -55,7 +55,7 @@
             </table>
         </div>
         <hr>
-        <a href="{{ route('checkout-success', $item->id) }}" class="btn btn-block btn-join-now mt-3 py-2">
+        <a href="{{ route('checkout-success', $item->id) }}" class="btn btn-block btn-join-now mt-3 py-2" style="background-color:#FC5043; color: white">
                                     Process Payment
                                 </a>
                             </div>

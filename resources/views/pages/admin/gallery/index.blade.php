@@ -17,7 +17,8 @@
             <table class="table table-bordered" width="100%" collspacing="0">
                 <thead>
                     <tr>
-                        <th>ID</th>
+                        <?php $no = 1 ?>
+                        <th>No</th>
                         <th>Daging</th>
                         <th>Gambar</th>
                         <th>Action</th>
@@ -26,7 +27,7 @@
                 <tbody>
                     @forelse ($items as $item)
                     <tr>
-                        <td>{{ $item->id }}</td>
+                        <td>{{ $no++ }}</td>
                         <td>{{ $item->meat_package->title }}</td>
                         <td>
                             <img src="{{ Storage::url($item->image) }}" alt="" style="width: 150px" class="img-thumbnail" />

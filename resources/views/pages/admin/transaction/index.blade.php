@@ -14,7 +14,7 @@
             <table class="table table-bordered" width="100%" collspacing="0">
                 <thead>
                     <tr>
-                        <th>ID</th>
+                        <th>No</th>
                         <th>Daging</th>
                         <th>User</th>
                         <th>Total</th>
@@ -23,11 +23,12 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <?php $no = 1 ?>
                     @forelse ($items as $item)
                     <tr>
-                        <td>{{ $item->id }}</td>
+                        <td>{{ $no++ }}</td>
                         <td>{{ $item->meat_package->title }}</td>
-                        <td>{{ $item->user->name }}</td>
+                        <td>{{ $item->user['name'] ?? 0 }}</td>
                         <td>{{ $item->transaction_total }}</td>
                         <td>{{ $item->transaction_status }}</td>
                         <td>

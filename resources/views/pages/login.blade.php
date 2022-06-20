@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"> -->
     <link rel="stylesheet" href="{{ url('frontend/css/style.css') }}" />
+    <link href="frontend/image/logo.png" rel="shortcut icon" >
     <title>Login</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
         <div class="container">
             <img src="{{ url('frontend/image/meatt.png') }}" alt="" class="img-login">
             <div class="col-md-5 col-sm-12 login">
-                <div class="login-title"><h2>LOGIN</h2></div>
+                <div class="login-title"><h2>MASUK</h2></div>
                 <div class="login-part">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -36,8 +37,8 @@
                         </div>
 
                         <div class="box-login">
-                            <h6>Password</h6>
-                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Password">
+                            <h6>Kata Sandi</h6>
+                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Kata Sandi">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -46,8 +47,8 @@
                                 @enderror
                         </div>
                         
-                        <button class="w-100 btn btn-lg mt-3 login-btn" type="submit">Login</button>
-                        <small class="d-block mt-2"><a href="">Lupa password?</a> </small>
+                        <button class="w-100 btn btn-lg mt-3 login-btn" type="submit">Masuk</button>
+                        <!--<small class="d-block mt-2"><a href="">Lupa password?</a> </small>-->
                         <p>Atau</p>
                         <a href="/user-register" class="w-100 btn btn-lg mt-4 signup-btn">Daftar</a>
                     </form>

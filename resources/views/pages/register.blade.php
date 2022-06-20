@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="frontend/image/logo.png" rel="shortcut icon" >
     <title>Register</title>
 </head>
 <body>
@@ -22,8 +23,8 @@
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
                         <div class="box-login">
-                            <h6>Name</h6>
-                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Name">
+                            <h6>Nama</h6>
+                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Nama">
 
                             @error('name')
                                 <span class="invalid-feedback" role="alert">
@@ -32,8 +33,8 @@
                             @enderror
                         </div>
                         <div class="box-login">
-                            <h6>Username</h6>
-                            <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus placeholder="username">
+                            <h6>Nama Pengguna</h6>
+                            <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus placeholder="Nama Pengguna">
 
                             @error('username')
                                 <span class="invalid-feedback" role="alert">
@@ -56,8 +57,8 @@
                             <input type="text" class="form-control" placeholder="Nomor Telepon">
                         </div> --}}
                         <div class="box-login">
-                            <h6>Address</h6>
-                            <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" autofocus placeholder="Address">
+                            <h6>Alamat</h6>
+                            <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" autofocus placeholder="Alamat">
                         
                             @error('address')
                                 <span class="invalid-feedback" role="alert">
@@ -66,8 +67,8 @@
                             @enderror
                         </div>
                         <div class="box-login">
-                            <h6>Password</h6>
-                            <input id="password" type="password" placeholder="Password"  class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                            <h6>Kata Sandi</h6>
+                            <input id="password" type="password" placeholder="Kata Sandi"  class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                             @error('password')
                                 <span class="invalid-feedback" role="alert">
@@ -76,12 +77,12 @@
                             @enderror
                         </div>
                         <div class="box-login">
-                            <h6>Confirm Password</h6>
-                            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Password" required autocomplete="new-password">
+                            <h6>Konfirmasi Kata Sandi</h6>
+                            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="Konfirmasi Kata Sandi" required autocomplete="new-password">
                         </div>
                         <button class="w-100 btn btn-lg mt-3 login-btn" type="submit">Daftar</button>
                         <p>Atau</p>
-                        <a href="/user-login" class="w-100 btn btn-lg mt-4 signup-btn">Login</a>
+                        <a href="/user-login" class="w-100 btn btn-lg mt-4 signup-btn">Masuk</a>
                     </form>
                 </div>
             </div>

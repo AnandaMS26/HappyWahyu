@@ -19,7 +19,7 @@
     <div class="section">
         <div class="container">
             <div class="title">
-                <h1>Tentang <h1 style="color: orangered;">Happy Meat</h1> </h1>
+                <h1>Tentang <h1 style="color: #FC5043;">Happy Meat</h1> </h1>
             </div>
             <div class="row mb-5">
                 <img src="{{ url('frontend/image/meat.png') }}" alt="happy meat">
@@ -37,7 +37,7 @@
                     <img src="{{ url('frontend/image/meat2.png') }}" alt="Happy Meat" style="float:">
                 </div>
                 <div class="col">
-                    <h1 style="color: orangered;">History</h1>
+                    <h1 style="color: #FC5043;">Sejarah</h1>
                             <p>
                                 Happy Meat berdiri pada tahun 2022. Latar belakang didirikannya Happy Meat berawal dari permasalahan yang terjadi di lingkungan sekitar, 
                                 yaitu haga daging sapi yang tidak stabil dan cenderung naik melonjak membuat masyarakat kekurangan informasi akan hal tersebut. Oleh karena itu, kami hadir untuk membantu Anda untuk membeli serta mengetahui harga daging sapi di pasaran. 
@@ -48,7 +48,7 @@
           
         </div>
     </div>
-    <div class="team-section">
+    {{-- <div class="team-section">
         <div class="container">
             <div class="row">
                 <div class="title">
@@ -78,7 +78,35 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
+    <section class="section-team">
+        <div class="container-team">
+          <h1 class="heading-section-team">Tim Kami</h1>
+
+          <div class="section-team-images-description">
+            <div class="col">
+              <img src="frontend/image/131.jpg" alt="daging-ilustrasi" />
+              <h4>Syakira Rahma Fauziyah</h4>
+              <p>Project Manager</p>
+            </div>
+            <div class="col">
+              <img src="frontend/image/511.jpg" alt="perusahaan-ilustrasi" />
+              <h4>Salma Tri Audryani</h4>
+              <p>Designer</p>
+            </div>
+            <div class="col">
+              <img src="frontend/image/571.jpg" alt="harga-ilustrasi" />
+              <h4>Muhammad Fachri Maulana</h4>
+              <p>Front-End Developer</p>
+            </div>
+            <div class="col">
+              <img src="frontend/image/711.jpg" alt="harga-ilustrasi" />
+              <h4>Ananda Miftakhul Syifa</h4>
+              <p>Back-End Developer</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
     @include('../includes/footer')
     

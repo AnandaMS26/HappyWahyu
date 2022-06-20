@@ -4,47 +4,6 @@
   box-sizing: border-box;
 }
 
-/************************/
-/* NAVBAR SECTION */
-/************************/
-.header {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-color: hsl(220, 60%, 95%, 0.2);
-}
-
-.header-container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 30px;
-  padding-right: 30px;
-  max-width: 1160px;
-}
-
-.header li {
-  list-style: none;
-}
-.header-logo {
-  float: left;
-}
-.list-left li {
-  float: left;
-  padding: 20px 35px 20px 0px;
-}
-.list-right li {
-  float: right;
-  padding: 20px 10px;
-}
-.header img {
-  position: relative;
-  width: 80%;
-  top: -20px;
-}
-.header a {
-  text-decoration: none;
-  color: #6d7d8b;
-  font-size: 15px;
-}
 
 /************************/
 /* HERO SECTION */
@@ -245,6 +204,20 @@
   margin-top: 16px;
   line-height: 163.2%;
 }
+.heading-card-product a{
+  text-decoration: none;
+  color: #24262b;
+  opacity: 0.8;
+}
+.heading-card-product a:hover{
+  text-decoration: none;
+  color: #24262b;
+  opacity: 1;
+}
+.caption-card{
+  color: #24262b;
+  font-size: 14px;
+}
 
 .price-card {
   font-family: "Mulish", sans-serif;
@@ -421,6 +394,13 @@ ul {
   .footer-col {
     width: 50%;
     margin-bottom: 30px;
+  }
+  .product-card{
+    margin: 0 auto;
+    /* text-align: center; */
+  }
+  .card-content-product{
+    text-align: center;
   }
 }
 

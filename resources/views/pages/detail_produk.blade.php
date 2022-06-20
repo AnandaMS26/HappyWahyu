@@ -14,7 +14,7 @@
 
     <!-- Content -->
     <div class="main">
-        <div class="col-md-12">    
+        <div class="col-md-12 product-part">    
             <div class="container detail-product">
                 @if($item->galleries->count())
                 <div class="container col-lg-5 col-md-5 col-sm-12 col-12 foto-product">
@@ -36,7 +36,7 @@
                     </form>
                     @endauth
                     @guest
-                    <a href="{{ route('login') }}"><i class="fa fa-shopping-cart"></i>Login or Register to Checkout</a>
+                    <a href="/user-login"><i class="fa fa-shopping-cart"></i>Login or Register to Checkout</a>
                     @endguest
                 </div>
             </div>

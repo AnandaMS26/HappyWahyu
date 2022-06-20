@@ -6,31 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{{ url('frontend/css/produk.css') }}" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mulish&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet"/>
+    <link href="frontend/image/logo.png" rel="shortcut icon" >
     <script src="js/main.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Produk Happy Meat</title>
   </head>
   <body class="body">
     <div class="header">
-      @include('../includes/navbar')
+      @include('../includes/navbar2')
     </div>
 
     <section class="section-hero">
       <div class="container-hero">
         <div class="flexbox-hero">
           <div class="right-block-hero">
-            <img class="image-hero" src="frontend/image/Image.png" />
+            <img class="image-hero" src="frontend/image/image.png" />
           </div>
           <div class="left-block-hero">
             <h2 class="hero-heading">Happy Meat Product</h2>
@@ -56,7 +48,7 @@
         <div class="filter-container">
           <div class="product-grid">
             @foreach ($items as $item)
-            <?php $deskripsi = substr($item->desc, 0, 30) ?>
+            <?php $deskripsi = substr($item->about, 0, 30) ?>
               <div href="/detail-product" class="product-card rib">
                 <div class="card-thumbnail-product-1" style="background-image: url('{{ $item->galleries->count() ? Storage::url
                   ($item->galleries->first()->image) : '' }}')">
@@ -67,7 +59,7 @@
                     <a href="{{ route('detail_produk', $item->slug) }}">{{ $item->title }}</a>
                   </h2>
                   <p class="caption-card">
-                    {{ $deskripsi }}
+                    {{ $deskripsi }} ...
                     </p>
                   <div class="price-cart-card">
                     <div class="price-card">Rp {{ $item->price }}</div>
@@ -82,9 +74,9 @@
               @endforeach
           </div>
         </div>
-        <div class="button-loading">
-          <a href="#" class="button-loading-product">Load More</a>
-        </div>
+        <!--<div class="button-loading">-->
+        <!--  <a href="#" class="button-loading-product">Load More</a>-->
+        <!--</div>-->
       </div>
     </section>
 

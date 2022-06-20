@@ -71,64 +71,30 @@ h3 {
 */
 
 /************************/
-/* NAVBAR */
-/************************/
-.header {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-color: hsl(220, 60%, 95%, 0.2);
-}
-
-.header-container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 30px;
-  padding-right: 30px;
-  max-width: 1160px;
-}
-
-.header li {
-  list-style: none;
-}
-.header-logo {
-  float: left;
-}
-.list-left li {
-  float: left;
-  padding: 20px 35px 20px 0px;
-}
-.list-right li {
-  float: right;
-  padding: 20px 10px;
-}
-.header img {
-  position: relative;
-  width: 80%;
-  top: -20px;
-}
-.header a {
-  text-decoration: none;
-  color: #6d7d8b;
-  font-size: 14px;
-  font-family: "Mulish", sans-serif;
-}
-/************************/
 /* HERO SECTION */
 /************************/
 .section-hero-lp {
-  width: 100%;
   padding-top: 80px;
   padding-left: 60px;
   padding-right: 60px;
   padding-bottom: 80px;
+  margin: 0 0 0 0;
   background-color: hsl(220, 60%, 95%, 0.2);
 }
 
 .container-hero-lp {
-  width: 80%;
   display: block;
-  margin: auto;
-  padding-top: 100px;
+  padding-left: 30px;
+  padding-top: 5em;
+  padding-right: 30px;
+  padding-bottom: 5em;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 100%;
+  max-width: 1160px;
+  position: static;
 }
 
 .hero-heading-lp {
@@ -141,7 +107,6 @@ h3 {
   font-size: 16px;
   line-height: 163.2%;
   font-family: "Mulish", sans-serif;
-  text-align: justify;
 }
 
 .flexbox-hero-lp {
@@ -164,6 +129,7 @@ h3 {
   overflow: visible;
   margin-right: -160px;
 }
+
 
 /************************/
 /* SECTION WHAT */
@@ -844,6 +810,12 @@ ul {
   .footer-col {
     width: 50%;
     margin-bottom: 30px;
+  }
+  .article-card, .product-card, .conten-wrapper-section-what{
+    margin: 0 auto;
+  }
+  .card-content-product, .card-content-article{
+    text-align: center;
   }
 }
 

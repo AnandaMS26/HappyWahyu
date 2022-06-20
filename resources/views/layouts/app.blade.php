@@ -9,7 +9,7 @@
     @stack('addon-style')
   </head>
   <body class="body">
-    @include('includes.navbar')
+    @include('includes.navbar2')
 
     @yield('content')
 

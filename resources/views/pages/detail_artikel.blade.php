@@ -21,14 +21,14 @@
                 <h3>{{ $item->title }}</h3>
                 <p>{{ $item->writer }} | {{ $item->publish }}</p>
             </div>
-            <div class="card-body">
-              <img class="imgcenter" src="{{ Storage::url($item->artikel_galleries->first()->image) }}" alt="Happy Meat" style="display: flex; width:80%">
+            <div class="card-body" style="padding: 5%">
+              <img class="imgcenter" src="{{ Storage::url($item->artikel_galleries->first()->image) }}" alt="Happy Meat" style="display: flex; width:70%; margin-left:15%">
                 <p class="card-text mt-3">
                     {{$item->desc}}
                 </p>  
             </div>
         </div>
-        <a href="/article"><button style="width: 10%;">Back</button></a>
+        <a href="/article"><button class="back-btn" style="width: 70px;">Back</button></a>
         
     </div>
     @include('../includes/footer')

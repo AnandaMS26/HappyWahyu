@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Mail;
+use App\Mail\TransactionSuccess;
+use App\Http\Controllers\validate;
+
 use App\Models\Transaction;
 use App\Models\TransactionDetail;
 use App\Models\MeatPackage;
@@ -57,7 +61,8 @@ class CheckoutController extends Controller
 
     public function success(Request $request, $id)
     {
-        $transaction = Transaction::findOrFail($id);
+        $transaction = Transaction::with(['details','meat_package.galleries',
+        'user'])->findOrFail($id);
         $transaction->transaction_status = 'PENDING';
 
         $transaction->save();
@@ -70,8 +75,8 @@ class CheckoutController extends Controller
 
         //Buat array yang dikirim ke midtrans
         $midtrans_params = [
-            'transaction_detail' => [
-                'order_id' => 'MIDTRANS-' . $transaction->id,
+            'transaction_details' => [
+                'order_id' => 'TEST-' . $transaction->id,
                 'gross_amount' => (int) $transaction->transaction_total
             ],
             'customer_details' => [
@@ -92,6 +97,12 @@ class CheckoutController extends Controller
         } catch (Exception $e) {
             echo $e->getMessage();
         }
+        
+
+        // kirim email e-ticket ke user
+        Mail::to($transaction->user)->send(
+            new TransactionSuccess($transaction)
+        );
 
         return view('pages.success');
     }
