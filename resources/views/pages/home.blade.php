@@ -137,7 +137,7 @@ Happy Meat
 
     <section class="section-article">
       <div class="container-article">
-        <h1 class="heading-section-article">Artikel terbaru</h1>
+        <h1 class="heading-section-article">Artikel Terbaru</h1>
         <p class="section-article-description">
           Kami menyediakan berbagai artikel untuk pengguna agar mendapatkan
           berita terkini seputar daging sapi
@@ -170,6 +170,37 @@ Happy Meat
           <a href="/article" class="button-lihat-article">Lihat Semua</a>
         </div>
       </div>
+    </section>
+
+    <section class="section-product">
+      <div class="container-product">
+        <h1 class="heading-section-product">Video Terbaru</h1>
+        <p class="section-product-description">
+          Kami menyediakan berbagai video menarik untuk pengguna agar mendapatkan
+          informasi seputar daging sapi
+        </p>
+        <div class="product-grid">
+          @foreach ($latest_video as $items => $item)
+          <?php $deskripsi = substr($item->desc, 0, 30) ?>
+            <div href="/detail_video" class="product-card rib">
+              <div class="card-thumbnail-product-1">
+                <iframe width="330px" height="100%" src="{{ $item->resource }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+              </div>
+              <div class="card-content-product">
+                <h2 class="heading-card-product">
+                  {{-- <a href="{{ route('detail_produk', $item->slug) }}">{{ $item->title }}</a> --}}
+                  <a href="{{ route('detail_video', $item->slug) }}"><b>{{ $item->title }}</b></a>
+                </h2>
+                <p class="caption-card">
+                  {{ $deskripsi }} ...
+                </p>
+              </div>
+            </div>
+            @endforeach
+          </div>
+          <div class="button-lihat-semua">
+            <a href="/video" class="button-lihat-article">Lihat Semua</a>
+          </div>
     </section>
 
 @include('../includes/footer')

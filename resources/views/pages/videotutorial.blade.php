@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet"/>
     <link href="frontend/image/logo.png" rel="shortcut icon" >
     <script src="js/main.js" crossorigin="anonymous"></script>
-    <title>Produk Happy Meat</title>
+    <title>Video Tutorial Happy Meat</title>
   </head>
   <body class="body">
     <div class="header">
@@ -22,15 +22,15 @@
       <div class="container-hero">
         <div class="flexbox-hero">
           <div class="right-block-hero">
-            <img class="image-hero" src="frontend/image/image.png" />
-          </div>
+            {{-- <img class="image-hero" src="frontend/image/image.png" /> --}}
+            <iframe width="500" height="280" src="https://www.youtube.com/embed/LwqOMQWqDtk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+         </div>
           <div class="left-block-hero">
-            <h2 class="hero-heading">Produk Happy Meat</h2>
+            <h2 class="hero-heading">Video Tutorial Happy Meat</h2>
             <p class="hero-paragraf">
-              Happy Meat menyediakan berbagai produk beku seperti daging sapi,
-              daging bagian daging sapi, daging sapi olahan, dll. Dengan
-              dedikasi yang tinggi kami terus berkomitmen untuk memberikan
-              produk yang berkualitas dengan harga yang terjangkau
+              Berbagai video informatif mengenai daging sapi sudah tersedia di Happy Meat, dari mulai
+              video tutorial membuat olahan masakan dari daging sapi, tips menarik menyimpan daging sapi, 
+              dan masih banyak video informatif lainnya!
             </p>
           </div>
         </div>
@@ -39,36 +39,30 @@
 
     <section class="section-product">
       <div class="container-product">
-        <h1 class="heading-section-product">Produk terbaru</h1>
+        <h1 class="heading-section-product">Video terbaru</h1>
         <!-- <p class="section-product-description">
           Project Discussions, important documents and get to know the news
           project earlier. Its easy to use and has a good Interface and
           comfortable with all good services.
         </p> -->
+        
+
         <div class="filter-container">
           <div class="product-grid">
-            @foreach ($latest_product as $items => $item)
-            <?php $deskripsi = substr($item->about, 0, 30) ?>
-              <div href="/detail-product" class="product-card rib">
-                <div class="card-thumbnail-product-1" style="background-image: url('{{ $item->galleries->count() ? Storage::url
-                  ($item->galleries->first()->image) : '' }}')">
-                  <span class="category-name">{{ $item->type }}</span>
+            @foreach ($latest_video as $items => $item)
+            <?php $deskripsi = substr($item->desc, 0, 30) ?>
+              <div href="/detail_video" class="product-card rib">
+                <div class="card-thumbnail-product-1">
+                  <iframe width="330px" height="100%" src="{{ $item->resource }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                 </div>
                 <div class="card-content-product">
                   <h2 class="heading-card-product">
-                    <a href="{{ route('detail_produk', $item->slug) }}">{{ $item->title }}</a>
+                    {{-- <a href="{{ route('detail_produk', $item->slug) }}">{{ $item->title }}</a> --}}
+                    <a href="{{ route('detail_video', $item->slug) }}"><b>{{ $item->title }}</b></a>
                   </h2>
                   <p class="caption-card">
                     {{ $deskripsi }} ...
-                    </p>
-                  <div class="price-cart-card">
-                    <div class="price-card">Rp {{ $item->price }}</div>
-                    <div>
-                      <a href="{{ route('detail_produk', $item->slug) }}" class="buy"
-                        >Beli</a
-                      >
-                    </div>
-                  </div>
+                  </p>
                 </div>
               </div>
               @endforeach

@@ -5,9 +5,9 @@
 
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Paket Daging</h1>
-    <a href="{{ route('meat-package.create') }}" class="btn btn-sm btn-primary shadow sm">
-        <i class="fas fa-plus fa-sm text-white-50"></i> Tambah Paket Daging
+    <h1 class="h3 mb-0 text-gray-800">Video Tutorial</h1>
+    <a href="{{ route('video-tutorial.create') }}" class="btn btn-sm btn-primary shadow sm">
+        <i class="fas fa-plus fa-sm text-white-50"></i> Tambah Video Tutorial
     </a>
 </div>
 
@@ -19,8 +19,9 @@
                     <tr>
                         <?php $no = 1 ?>
                         <th>No</th>
-                        <th>title</th>
-                        <th>type</th>
+                        <th>Title</th>
+                        <th>Creator</th>
+                        <th>Publish</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -28,14 +29,14 @@
                     @forelse ($items as $item)
                     <tr>
                         <td>{{ $no++ }}</td>
-                        {{-- <td>{{ $item->id }}</td> --}}
                         <td>{{ $item->title }}</td>
-                        <td>{{ $item->type }}</td>
+                        <td>{{ $item->creator }}</td>
+                        <td>{{ $item->publish }}</td>
                         <td>
-                            <a href="{{ route('meat-package.edit', $item->id) }}" class="btn btn-info">
+                            <a href="{{ route('video-tutorial.edit', $item->id) }}" class="btn btn-info">
                                 <i class="fa fa-pencil-alt"></i>
                             </a>
-                            <form action="{{ route('meat-package.destroy', $item->id) }}" method="POST" class="d-inline">
+                            <form action="{{ route('video-tutorial.destroy', $item->id) }}" method="POST" class="d-inline">
                                 @csrf
                                 @method('delete')
                                 <button class="btn btn-danger">

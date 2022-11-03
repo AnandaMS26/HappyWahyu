@@ -1,10 +1,15 @@
 <?php
 
+class App extends Illuminate\Support\Facades\App {}
+class Artisan extends Illuminate\Support\Facades\Artisan {}
+class Auth extends Illuminate\Support\Facades\Auth {}
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\MeatPackageController;
 use App\Http\Controllers\Admin\ArtikelPackageController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\ArtikelGalleryController;
+use App\Http\Controllers\Admin\VideoTutorialController;
 use App\Http\Controllers\Admin\TransactionController;
 use App\Http\Controllers\Admin\CheckoutController;
 use App\Http\Controllers\MidtransController;
@@ -64,7 +69,14 @@ Route::get('/article', function(){
     return view('pages/artikel');
 });
 
-Route::get('/product', 'App\Http\Controllers\ProdController@index')
+// Route::get('/detail-video', function(){
+//     return view('pages/detail_videotutor');
+// });
+
+Route::get('/video', 'App\Http\Controllers\VideoController@index')
+    ->name('video');
+
+Route::get('/product', 'App\Http\Controllers\ProductController@index')
     ->name('product');
 
 Route::get('/article', 'App\Http\Controllers\ArtikelController@index')
@@ -72,6 +84,9 @@ Route::get('/article', 'App\Http\Controllers\ArtikelController@index')
 
 Route::get('/detail_produk/{slug}', 'App\Http\Controllers\DetailController@index')
     ->name('detail_produk');
+
+Route::get('/detail_video/{slug}', 'App\Http\Controllers\DetailVideoController@index')
+    ->name('detail_video');
 
 Route::get('/detail_artikel/{slug}', 'App\Http\Controllers\DetailArtikelController@index')
     ->name('detail_artikel');
@@ -109,6 +124,7 @@ Route::prefix('admin')
         Route::resource('artikel-package', ArtikelPackageController::class);
         Route::resource('gallery', GalleryController::class);
         Route::resource('artikel-gallery', ArtikelGalleryController::class);
+        Route::resource('video-tutorial', VideoTutorialController::class);
         Route::resource('transaction', TransactionController::class);
     });
     

@@ -27,7 +27,8 @@
                 <tbody>
                     @forelse ($items as $item)
                     <tr>
-                        <td>{{ $no++ }}</td>
+                        {{-- <td>{{ $no++ }}</td> --}}
+                        <td>{{ $item->id }}</td>
                         <td>{{ $item->title }}</td>
                         <td>{{ $item->writer }}</td>
                         <td>

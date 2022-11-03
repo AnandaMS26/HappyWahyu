@@ -44,7 +44,7 @@
           comfortable with all good services.
         </p> -->
         <div class="article-grid">
-          @foreach ($items as $item)
+          @foreach ($latest_article as $items => $item)
           <?php $deskripsi = substr($item->desc, 0, 30) ?>
           <a href="{{ route('detail_artikel', $item->slug) }}" class="article-card w-inline-block">
             <div class="card-thumbnail-produk-1" style="background-image: url('{{ $item->artikel_galleries->count() ? Storage::url

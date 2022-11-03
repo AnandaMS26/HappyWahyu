@@ -11,7 +11,8 @@ class ArtikelController extends Controller
     {
         $items = ArtikelPackage::with(['artikel_galleries'])->get();
         return view('pages.artikel',[
-            'items' => $items
+            'items' => $items,
+            'latest_article' => ArtikelPackage::latest()->get(),
         ]);
     }
 }

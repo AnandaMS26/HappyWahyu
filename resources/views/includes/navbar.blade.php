@@ -21,6 +21,7 @@
                     <li><a href="/">Beranda</a></li>
                     <li><a href="/product">Produk</a></li>
                     <li><a href="/article">Artikel</a></li>
+                    <li><a href="/video">Video</a></li>
                     <li><a href="/aboutus">Tentang</a></li>
                 </ul>
             </div>
